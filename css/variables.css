@@ -1,0 +1,49 @@
+:root {
+    --pink-dark: #8f2f68;
+    --pink-main: #ff4fa3;
+    --pink-bright: #ff78bd;
+    --pink-soft: #ffc5df;
+    --pink-light: #fff0f7;
+
+    --purple-dark: #4c246b;
+    --purple-main: #9c5cff;
+    --purple-soft: #d8bdff;
+
+    --blue-glow: #66d9ff;
+    --yellow-glow: #ffe28a;
+
+    --cream: #fff9fc;
+    --white: #ffffff;
+
+    --text-dark: #2d2035;
+    --text-medium: #705f78;
+    --text-light: #a28da8;
+
+    --border-light: rgba(255, 79, 163, 0.18);
+    --border-glow: rgba(255, 79, 163, 0.55);
+
+    --shadow-soft:
+        0 20px 60px rgba(112, 57, 125, 0.12);
+
+    --shadow-pink:
+        0 0 12px rgba(255, 79, 163, 0.35),
+        0 0 30px rgba(255, 79, 163, 0.18);
+
+    --shadow-glow:
+        0 0 8px rgba(255, 79, 163, 0.65),
+        0 0 22px rgba(156, 92, 255, 0.35),
+        0 18px 45px rgba(112, 57, 125, 0.22);
+
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --container-width: 1180px;
+    --header-height: 78px;
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.35s ease;
+
+    --radius-small: 10px;
+    --radius-medium: 22px;
+    --radius-large: 38px;
+}
