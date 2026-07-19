@@ -24,9 +24,10 @@
     <link rel="stylesheet" href="css/timeline.css">
     <link rel="stylesheet" href="css/achievements.css">
     <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/global-reach.css">
     <link rel="stylesheet" href="css/partnerships.css">
+    <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
@@ -124,39 +125,31 @@
 
             <div class="nav-links" id="navLinks">
 
-    <a href="#home" class="nav-link active">
-        Home
-    </a>
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
 
-    <a href="#about" class="nav-link">
-        About
-    </a>
+                <a href="#about" class="nav-link">
+                    About
+                </a>
 
-    <a href="#journey" class="nav-link">
-        Journey
-    </a>
+                <a href="#journey" class="nav-link">
+                    Journey
+                </a>
 
-    <a href="#achievements" class="nav-link">
-        Achievements
-    </a>
+                <a href="#gallery" class="nav-link">
+                    Cosplays
+                </a>
 
-    <a href="#gallery" class="nav-link">
-        Cosplays
-    </a>
+                <a href="#events" class="nav-link">
+                    Events
+                </a>
 
-    <a href="#events" class="nav-link">
-        Events
-    </a>
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
 
-    <a href="#partnerships" class="nav-link">
-        Partnerships
-    </a>
-
-    <a href="#contact" class="nav-link">
-        Contact
-    </a>
-
-</div>
+            </div>
 
         </nav>
 
@@ -489,12 +482,12 @@
                         </article>
 
                         <article class="achievement-counter-card">
-                            <strong>7+</strong>
+                            <strong>6</strong>
                             <span>Countries Reached</span>
                         </article>
 
                         <article class="achievement-counter-card">
-                            <strong>30+</strong>
+                            <strong>40+</strong>
                             <span>Events and Appearances</span>
                         </article>
 
@@ -803,297 +796,628 @@
             </div>
 
         </section>
-        <section class="events-section section" id="events">
 
-    <div class="events-glow events-glow-one"></div>
-    <div class="events-glow events-glow-two"></div>
+        <!-- EVENTS -->
 
-    <div class="container">
+        <section
+            class="events-section section"
+            id="events"
+        >
 
-        <div class="section-heading centered">
+            <div class="events-glow events-glow-one"></div>
+            <div class="events-glow events-glow-two"></div>
 
-            <p class="section-label">
-                Past Guestings & Events
-            </p>
+            <div class="container">
 
-            <h2>
-                A cosplay journey across local and international stages.
-            </h2>
+                <div class="section-heading centered">
 
-            <p class="section-description">
-                Explore Miho’s competitions, championships, guest
-                appearances, judging engagements, and international
-                milestones through the years.
-            </p>
+                    <p class="section-label">
+                        Past Guestings & Events
+                    </p>
 
-        </div>
+                    <h2>
+                        A cosplay journey across local and
+                        international stages.
+                    </h2>
 
-        <div class="events-feature">
+                    <p class="section-description">
+                        Explore Miho’s competitions, championships,
+                        guest appearances, judging engagements,
+                        and international milestones through the years.
+                    </p>
 
-            <div class="events-feature-content">
+                </div>
 
-                <span class="events-feature-label">
-                    International Milestone
-                </span>
+                <div class="events-feature">
 
-                <h3>
-                    World Cosplay Summit
-                </h3>
+                    <div class="events-feature-content">
 
-                <p>
-                    Miho represented the Philippines at the World
-                    Cosplay Summit in Japan in 2014. She later returned
-                    as an alumni guest, Philippine ambassador, and
-                    international guest.
-                </p>
+                        <span class="events-feature-label">
+                            International Milestone
+                        </span>
 
-                <div class="events-feature-tags">
-                    <span>Japan</span>
-                    <span>Representative</span>
-                    <span>Alumni Guest</span>
-                    <span>Ambassador</span>
+                        <h3>
+                            World Cosplay Summit
+                        </h3>
+
+                        <p>
+                            Miho represented the Philippines at the
+                            World Cosplay Summit in Japan in 2014.
+                            She later returned as an alumni guest,
+                            Philippine ambassador, and international guest.
+                        </p>
+
+                        <div class="events-feature-tags">
+                            <span>Japan</span>
+                            <span>Representative</span>
+                            <span>Alumni Guest</span>
+                            <span>Ambassador</span>
+                        </div>
+
+                    </div>
+
+                    <div class="events-feature-year">
+                        <span>Journey Since</span>
+                        <strong>2012</strong>
+                    </div>
+
+                </div>
+
+                <div class="events-toolbar">
+
+                    <div
+                        class="events-tabs"
+                        id="eventsTabs"
+                        aria-label="Filter past events"
+                    >
+
+                        <button
+                            class="events-tab active"
+                            type="button"
+                            data-event-filter="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="events-tab"
+                            type="button"
+                            data-event-filter="international"
+                        >
+                            International
+                        </button>
+
+                        <button
+                            class="events-tab"
+                            type="button"
+                            data-event-filter="local"
+                        >
+                            Philippines
+                        </button>
+
+                        <button
+                            class="events-tab"
+                            type="button"
+                            data-event-filter="competition"
+                        >
+                            Competitions
+                        </button>
+
+                        <button
+                            class="events-tab"
+                            type="button"
+                            data-event-filter="guest"
+                        >
+                            Guestings
+                        </button>
+
+                        <button
+                            class="events-tab"
+                            type="button"
+                            data-event-filter="judge"
+                        >
+                            Judging
+                        </button>
+
+                    </div>
+
+                    <div class="events-search">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="eventsSearch"
+                            placeholder="Search event, city, or country..."
+                            aria-label="Search past events"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="events-summary">
+
+                    <p>
+                        Showing
+                        <strong id="eventsVisibleCount">0</strong>
+                        appearances
+                    </p>
+
+                    <select
+                        id="eventsYearFilter"
+                        aria-label="Filter events by year"
+                    >
+                        <option value="all">
+                            All years
+                        </option>
+                    </select>
+
+                </div>
+
+                <div
+                    class="events-grid"
+                    id="eventsGrid"
+                    aria-live="polite"
+                >
+
+                    <div class="events-loading">
+                        <span>✦</span>
+                        <p>Loading past appearances...</p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="events-empty"
+                    id="eventsEmpty"
+                >
+                    <span>✧</span>
+                    <h3>No appearances found</h3>
+                    <p>
+                        Try another category, year, or search term.
+                    </p>
                 </div>
 
             </div>
 
-            <div class="events-feature-year">
-                <span>Journey Since</span>
-                <strong>2012</strong>
-            </div>
+        </section>
 
-        </div>
+        <!-- GLOBAL REACH -->
 
-        <div class="events-toolbar">
+        <section
+            class="global-reach section"
+            id="globalReach"
+        >
 
             <div
-                class="events-tabs"
-                id="eventsTabs"
-                aria-label="Filter past events"
-            >
-                <button
-                    class="events-tab active"
-                    type="button"
-                    data-event-filter="all"
-                >
-                    All
-                </button>
+                class="global-reach-glow global-reach-glow-one"
+            ></div>
 
-                <button
-                    class="events-tab"
-                    type="button"
-                    data-event-filter="international"
-                >
-                    International
-                </button>
+            <div
+                class="global-reach-glow global-reach-glow-two"
+            ></div>
 
-                <button
-                    class="events-tab"
-                    type="button"
-                    data-event-filter="local"
-                >
-                    Philippines
-                </button>
+            <div class="container">
 
-                <button
-                    class="events-tab"
-                    type="button"
-                    data-event-filter="competition"
-                >
-                    Competitions
-                </button>
+                <div class="global-reach-header">
 
-                <button
-                    class="events-tab"
-                    type="button"
-                    data-event-filter="guest"
-                >
-                    Guestings
-                </button>
+                    <div class="section-heading">
 
-                <button
-                    class="events-tab"
-                    type="button"
-                    data-event-filter="judge"
-                >
-                    Judging
-                </button>
+                        <p class="section-label">
+                            Global Reach
+                        </p>
+
+                        <h2>
+                            Bringing Filipino cosplay to stages
+                            around the world.
+                        </h2>
+
+                    </div>
+
+                    <p class="global-reach-introduction">
+                        From conventions in the Philippines to
+                        international events across Asia and the
+                        Middle East, Miho’s cosplay journey continues
+                        to connect communities across borders.
+                    </p>
+
+                </div>
+
+                <div class="global-reach-summary">
+
+                    <article class="global-main-stat">
+
+                        <span class="global-main-label">
+                            Countries Reached
+                        </span>
+
+                        <strong>
+                            6
+                        </strong>
+
+                        <p>
+                            Countries reached through cosplay
+                            competitions, conventions, guest
+                            appearances, and collaborations.
+                        </p>
+
+                        <div class="global-main-line">
+                            <span></span>
+                            <i>✦</i>
+                            <span></span>
+                        </div>
+
+                    </article>
+
+                    <div class="global-stat-grid">
+
+                        <article class="global-stat-card">
+                            <strong>18</strong>
+                            <span>International Appearances</span>
+                        </article>
+
+                        <article class="global-stat-card">
+                            <strong>2014</strong>
+                            <span>First Global Representation</span>
+                        </article>
+
+                        <article class="global-stat-card">
+                            <strong>5</strong>
+                            <span>International Destinations</span>
+                        </article>
+
+                        <article class="global-stat-card">
+                            <strong>12+</strong>
+                            <span>Years of Cosplay</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <div class="global-destinations">
+
+                    <article
+                        class="destination-card destination-featured"
+                    >
+
+                        <div class="destination-flag">
+                            🇯🇵
+                        </div>
+
+                        <div class="destination-information">
+
+                            <p class="destination-region">
+                                East Asia
+                            </p>
+
+                            <h3>
+                                Japan
+                            </h3>
+
+                            <p>
+                                World Cosplay Summit representative,
+                                alumni guest, Philippine ambassador,
+                                guest speaker, competition winner,
+                                and international guest.
+                            </p>
+
+                            <div class="destination-tags">
+                                <span>World Cosplay Summit</span>
+                                <span>Cosmeria</span>
+                                <span>Nico Nico Live</span>
+                            </div>
+
+                        </div>
+
+                        <span class="destination-number">
+                            01
+                        </span>
+
+                    </article>
+
+                    <article class="destination-card">
+
+                        <div class="destination-flag">
+                            🇸🇬
+                        </div>
+
+                        <div class="destination-information">
+
+                            <p class="destination-region">
+                                Southeast Asia
+                            </p>
+
+                            <h3>
+                                Singapore
+                            </h3>
+
+                            <p>
+                                Appeared at Drawcrowd, Anime Festival Asia,
+                                and World X Fest.
+                            </p>
+
+                        </div>
+
+                        <span class="destination-number">
+                            02
+                        </span>
+
+                    </article>
+
+                    <article class="destination-card">
+
+                        <div class="destination-flag">
+                            🇮🇩
+                        </div>
+
+                        <div class="destination-information">
+
+                            <p class="destination-region">
+                                Southeast Asia
+                            </p>
+
+                            <h3>
+                                Indonesia
+                            </h3>
+
+                            <p>
+                                International guest at an esports
+                                and gaming convention.
+                            </p>
+
+                        </div>
+
+                        <span class="destination-number">
+                            03
+                        </span>
+
+                    </article>
+
+                    <article class="destination-card">
+
+                        <div class="destination-flag">
+                            🇸🇦
+                        </div>
+
+                        <div class="destination-information">
+
+                            <p class="destination-region">
+                                Middle East
+                            </p>
+
+                            <h3>
+                                Saudi Arabia
+                            </h3>
+
+                            <p>
+                                Guest at Gamers8 and the World Cosplay
+                                Summit international program.
+                            </p>
+
+                        </div>
+
+                        <span class="destination-number">
+                            04
+                        </span>
+
+                    </article>
+
+                    <article class="destination-card">
+
+                        <div class="destination-flag">
+                            🇻🇳
+                        </div>
+
+                        <div class="destination-information">
+
+                            <p class="destination-region">
+                                Southeast Asia
+                            </p>
+
+                            <h3>
+                                Vietnam
+                            </h3>
+
+                            <p>
+                                International cosplay guest
+                                at Ambedo Fiesta.
+                            </p>
+
+                        </div>
+
+                        <span class="destination-number">
+                            05
+                        </span>
+
+                    </article>
+
+                    <article class="destination-card">
+
+                        <div class="destination-flag">
+                            🇵🇭
+                        </div>
+
+                        <div class="destination-information">
+
+                            <p class="destination-region">
+                                Home Country
+                            </p>
+
+                            <h3>
+                                Philippines
+                            </h3>
+
+                            <p>
+                                Competitor, champion, guest, and judge
+                                at events across Metro Manila, Davao,
+                                Cebu, Palawan, Bacolod, Dipolog,
+                                and other cities.
+                            </p>
+
+                        </div>
+
+                        <span class="destination-number">
+                            06
+                        </span>
+
+                    </article>
+
+                </div>
+
+                <div class="global-reach-quote">
+
+                    <span class="global-quote-mark">
+                        “
+                    </span>
+
+                    <p>
+                        Every stage is another opportunity to share
+                        creativity, celebrate characters, and represent
+                        the Filipino cosplay community.
+                    </p>
+
+                    <span class="global-quote-signature">
+                        Miho’s Cosplay Journey
+                    </span>
+
+                </div>
+
             </div>
-
-            <div class="events-search">
-
-                <span>⌕</span>
-
-                <input
-                    type="search"
-                    id="eventsSearch"
-                    placeholder="Search event, city, or country..."
-                    aria-label="Search past events"
-                    autocomplete="off"
-                >
-
-            </div>
-
-        </div>
-
-        <div class="events-summary">
-
-            <p>
-                Showing
-                <strong id="eventsVisibleCount">0</strong>
-                appearances
-            </p>
-
-            <select
-                id="eventsYearFilter"
-                aria-label="Filter events by year"
-            >
-                <option value="all">All years</option>
-            </select>
-
-        </div>
-
-        <div
-            class="events-grid"
-            id="eventsGrid"
-            aria-live="polite"
-        >
-            <div class="events-loading">
-                <span>✦</span>
-                <p>Loading past appearances...</p>
-            </div>
-        </div>
-
-        <div class="events-empty" id="eventsEmpty">
-            <span>✧</span>
-            <h3>No appearances found</h3>
-            <p>Try another category, year, or search term.</p>
-        </div>
-
-    </div>
 
         </section>
+
+        <!-- PARTNERSHIPS -->
+
         <section
-    class="partnerships-section section"
-    id="partnerships"
->
-
-    <div
-        class="partnerships-decoration partnerships-decoration-one"
-    ></div>
-
-    <div
-        class="partnerships-decoration partnerships-decoration-two"
-    ></div>
-
-    <div class="container">
-
-        <div class="section-heading centered">
-
-            <p class="section-label">
-                Partnerships
-            </p>
-
-            <h2>
-                Collaborations across cosplay, gaming, and entertainment.
-            </h2>
-
-            <p class="section-description">
-                Selected ambassador roles, creative campaigns,
-                gaming partnerships, and brand collaborations
-                throughout Miho’s career.
-            </p>
-
-        </div>
-
-        <div class="partnership-feature">
-
-            <div class="partnership-feature-copy">
-
-                <p class="partnership-feature-label">
-                    Creative Collaborations
-                </p>
-
-                <h3>
-                    Bringing game worlds and characters into reality.
-                </h3>
-
-                <p>
-                    Miho has collaborated with gaming publishers,
-                    technology brands, entertainment platforms,
-                    and cosplay communities through character
-                    portrayals, ambassador roles, and campaigns.
-                </p>
-
-            </div>
-
-            <div class="partnership-feature-symbol">
-                ✦
-            </div>
-
-        </div>
-
-        <div class="partnership-tabs">
-
-            <button
-                class="partnership-tab active"
-                type="button"
-                data-partnership-filter="all"
-            >
-                All
-            </button>
-
-            <button
-                class="partnership-tab"
-                type="button"
-                data-partnership-filter="ambassador"
-            >
-                Ambassador Roles
-            </button>
-
-            <button
-                class="partnership-tab"
-                type="button"
-                data-partnership-filter="gaming"
-            >
-                Gaming
-            </button>
-
-            <button
-                class="partnership-tab"
-                type="button"
-                data-partnership-filter="technology"
-            >
-                Technology
-            </button>
-
-            <button
-                class="partnership-tab"
-                type="button"
-                data-partnership-filter="platform"
-            >
-                Platforms
-            </button>
-        </div>
-
-        <div
-            class="partnership-grid"
-            id="partnershipGrid"
-            aria-live="polite"
+            class="partnerships-section section"
+            id="partnerships"
         >
-            <div class="partnership-loading">
-                <span>✦</span>
-                <p>Loading partnerships...</p>
+
+            <div
+                class="partnerships-decoration partnerships-decoration-one"
+            ></div>
+
+            <div
+                class="partnerships-decoration partnerships-decoration-two"
+            ></div>
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <p class="section-label">
+                        Partnerships
+                    </p>
+
+                    <h2>
+                        Collaborations across cosplay, gaming,
+                        and entertainment.
+                    </h2>
+
+                    <p class="section-description">
+                        Selected ambassador roles, creative campaigns,
+                        gaming partnerships, and brand collaborations
+                        throughout Miho’s career.
+                    </p>
+
+                </div>
+
+                <div class="partnership-feature">
+
+                    <div class="partnership-feature-copy">
+
+                        <p class="partnership-feature-label">
+                            Creative Collaborations
+                        </p>
+
+                        <h3>
+                            Bringing game worlds and characters
+                            into reality.
+                        </h3>
+
+                        <p>
+                            Miho has collaborated with gaming publishers,
+                            technology brands, entertainment platforms,
+                            and cosplay communities through character
+                            portrayals, ambassador roles, and campaigns.
+                        </p>
+
+                    </div>
+
+                    <div class="partnership-feature-symbol">
+                        ✦
+                    </div>
+
+                </div>
+
+                <div class="partnership-tabs">
+
+                    <button
+                        class="partnership-tab active"
+                        type="button"
+                        data-partnership-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="partnership-tab"
+                        type="button"
+                        data-partnership-filter="ambassador"
+                    >
+                        Ambassador Roles
+                    </button>
+
+                    <button
+                        class="partnership-tab"
+                        type="button"
+                        data-partnership-filter="gaming"
+                    >
+                        Gaming
+                    </button>
+
+                    <button
+                        class="partnership-tab"
+                        type="button"
+                        data-partnership-filter="technology"
+                    >
+                        Technology
+                    </button>
+
+                    <button
+                        class="partnership-tab"
+                        type="button"
+                        data-partnership-filter="platform"
+                    >
+                        Platforms
+                    </button>
+
+                </div>
+
+                <div
+                    class="partnership-grid"
+                    id="partnershipGrid"
+                    aria-live="polite"
+                >
+
+                    <div class="partnership-loading">
+                        <span>✦</span>
+                        <p>Loading partnerships...</p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="partnership-empty"
+                    id="partnershipEmpty"
+                >
+                    No partnerships are available in this category.
+                </div>
+
             </div>
-        </div>
-
-        <div
-            class="partnership-empty"
-            id="partnershipEmpty"
-        >
-            No partnerships are available in this category.
-        </div>
-
-    </div>
 
         </section>
 
