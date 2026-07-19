@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Official-style portfolio archive for Miho, a Filipino cosplayer bringing characters to life since 2012."
+        content="Portfolio website for Miho, a Filipino cosplayer bringing anime and game characters to life since 2012."
     >
 
     <title>Miho | Cosplayer</title>
@@ -18,80 +22,88 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/achievements.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/intro.css">
-    <link rel="stylesheet" href="css/achievements.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/partnerships.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+
+    <!-- INTRO SCREEN -->
+
     <div class="intro-screen" id="introScreen">
 
-    <div class="intro-background">
+        <div class="intro-background">
 
-        <span class="intro-orb intro-orb-one"></span>
-        <span class="intro-orb intro-orb-two"></span>
-        <span class="intro-orb intro-orb-three"></span>
+            <span class="intro-orb intro-orb-one"></span>
+            <span class="intro-orb intro-orb-two"></span>
+            <span class="intro-orb intro-orb-three"></span>
 
-        <span class="intro-sparkle sparkle-one">✦</span>
-        <span class="intro-sparkle sparkle-two">✧</span>
-        <span class="intro-sparkle sparkle-three">✦</span>
-        <span class="intro-sparkle sparkle-four">✧</span>
-        <span class="intro-sparkle sparkle-five">✦</span>
+            <span class="intro-sparkle sparkle-one">✦</span>
+            <span class="intro-sparkle sparkle-two">✧</span>
+            <span class="intro-sparkle sparkle-three">✦</span>
+            <span class="intro-sparkle sparkle-four">✧</span>
+            <span class="intro-sparkle sparkle-five">✦</span>
 
-    </div>
-
-    <div class="intro-panel">
-
-        <p class="intro-eyebrow">
-            Welcome to the cosplay world of
-        </p>
-
-        <h1 class="intro-logo">
-            MIHO
-        </h1>
-
-        <p class="intro-role">
-            Cosplayer · Creator · Philippines
-        </p>
-
-        <div class="intro-divider">
-            <span></span>
-            <strong>✦</strong>
-            <span></span>
         </div>
 
-        <p class="intro-message">
-            Enter a world where anime, games, creativity,
-            and imagination come to life.
+        <div class="intro-panel">
+
+            <p class="intro-eyebrow">
+                Welcome to the cosplay world of
+            </p>
+
+            <h1 class="intro-logo">
+                MIHO
+            </h1>
+
+            <p class="intro-role">
+                Cosplayer · Creator · Philippines
+            </p>
+
+            <div class="intro-divider">
+                <span></span>
+                <strong>✦</strong>
+                <span></span>
+            </div>
+
+            <p class="intro-message">
+                Enter a world where anime, games, creativity,
+                and imagination come to life.
+            </p>
+
+            <button
+                class="intro-enter-button"
+                id="introEnterButton"
+                type="button"
+            >
+                <span>Enter Cosplay World</span>
+                <strong>→</strong>
+            </button>
+
+            <button
+                class="intro-skip-button"
+                id="introSkipButton"
+                type="button"
+            >
+                Skip introduction
+            </button>
+
+        </div>
+
+        <p class="intro-footer">
+            Bringing characters to life since 2012
         </p>
-
-        <button
-            class="intro-enter-button"
-            id="introEnterButton"
-            type="button"
-        >
-            <span>Enter Cosplay World</span>
-            <strong>→</strong>
-        </button>
-
-        <button
-            class="intro-skip-button"
-            id="introSkipButton"
-            type="button"
-        >
-            Skip introduction
-        </button>
 
     </div>
 
-    <p class="intro-footer">
-        Bringing characters to life since 2012
-    </p>
-
-</div>
+    <!-- NAVIGATION -->
 
     <header class="site-header">
+
         <nav class="navbar container">
 
             <a href="#home" class="site-logo">
@@ -111,18 +123,48 @@
             </button>
 
             <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#journey" class="nav-link">Journey</a>
-                <a href="#achievements" class="nav-link">Achievements</a>
-                <a href="#gallery" class="nav-link">Cosplays</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
+
+    <a href="#home" class="nav-link active">
+        Home
+    </a>
+
+    <a href="#about" class="nav-link">
+        About
+    </a>
+
+    <a href="#journey" class="nav-link">
+        Journey
+    </a>
+
+    <a href="#achievements" class="nav-link">
+        Achievements
+    </a>
+
+    <a href="#gallery" class="nav-link">
+        Cosplays
+    </a>
+
+    <a href="#events" class="nav-link">
+        Events
+    </a>
+
+    <a href="#partnerships" class="nav-link">
+        Partnerships
+    </a>
+
+    <a href="#contact" class="nav-link">
+        Contact
+    </a>
+
+</div>
 
         </nav>
+
     </header>
 
     <main>
+
+        <!-- HERO -->
 
         <section class="hero" id="home">
 
@@ -144,17 +186,23 @@
                     </h1>
 
                     <p class="hero-description">
-                        Discover the journey, achievements, events, and
-                        unforgettable cosplay creations of Miho.
+                        Discover the journey, achievements, events,
+                        and unforgettable cosplay creations of Miho.
                     </p>
 
                     <div class="hero-actions">
 
-                        <a href="#journey" class="button button-primary">
+                        <a
+                            href="#journey"
+                            class="button button-primary"
+                        >
                             Explore Her Journey
                         </a>
 
-                        <a href="#gallery" class="button button-secondary">
+                        <a
+                            href="#gallery"
+                            class="button button-secondary"
+                        >
                             View Cosplays
                         </a>
 
@@ -209,6 +257,8 @@
 
         </section>
 
+        <!-- ABOUT -->
+
         <section class="about section" id="about">
 
             <div class="container about-layout">
@@ -220,7 +270,8 @@
                     </p>
 
                     <h2>
-                        A passion for transforming imagination into reality.
+                        A passion for transforming imagination
+                        into reality.
                     </h2>
 
                 </div>
@@ -228,16 +279,17 @@
                 <div class="about-content">
 
                     <p>
-                        Miho is a cosplayer from the Philippines who has been
-                        bringing beloved anime and game characters to life
-                        since 2012.
+                        Miho is a cosplayer from the Philippines
+                        who has been bringing beloved anime and
+                        game characters to life since 2012.
                     </p>
 
                     <p>
-                        What began as a love for anime and gaming became a
-                        creative journey filled with artistry, performance,
-                        travel, competitions, and meaningful connections
-                        throughout the cosplay community.
+                        What began as a love for anime and gaming
+                        became a creative journey filled with
+                        artistry, performance, travel, competitions,
+                        and meaningful connections throughout the
+                        cosplay community.
                     </p>
 
                     <a href="#journey" class="text-link">
@@ -251,7 +303,12 @@
 
         </section>
 
-        <section class="journey-preview section" id="journey">
+        <!-- JOURNEY -->
+
+        <section
+            class="journey-preview section"
+            id="journey"
+        >
 
             <div class="container">
 
@@ -266,8 +323,9 @@
                     </h2>
 
                     <p class="section-description">
-                        A growing timeline of Miho’s achievements, guest
-                        appearances, championships, and global milestones.
+                        A growing timeline of Miho’s achievements,
+                        guest appearances, championships, and
+                        global milestones.
                     </p>
 
                 </div>
@@ -275,39 +333,72 @@
                 <div class="timeline-preview">
 
                     <article class="timeline-card">
-                        <span class="timeline-year">2012</span>
-                        <h3>The Journey Begins</h3>
+
+                        <span class="timeline-year">
+                            2012
+                        </span>
+
+                        <h3>
+                            The Journey Begins
+                        </h3>
+
                         <p>
-                            Miho began cosplaying, inspired by her love for
-                            anime, games, and character design.
+                            Miho began cosplaying, inspired by her
+                            love for anime, games, and character design.
                         </p>
+
                     </article>
 
                     <article class="timeline-card">
-                        <span class="timeline-year">2014</span>
-                        <h3>World Cosplay Summit</h3>
+
+                        <span class="timeline-year">
+                            2014
+                        </span>
+
+                        <h3>
+                            World Cosplay Summit
+                        </h3>
+
                         <p>
-                            Represented the Philippines at the World Cosplay
-                            Summit in Japan.
+                            Represented the Philippines at the
+                            World Cosplay Summit in Japan.
                         </p>
+
                     </article>
 
                     <article class="timeline-card">
-                        <span class="timeline-year">2019</span>
-                        <h3>Philippine Ambassador</h3>
+
+                        <span class="timeline-year">
+                            2019
+                        </span>
+
+                        <h3>
+                            Philippine Ambassador
+                        </h3>
+
                         <p>
-                            Became a World Cosplay Summit Ambassador of the
-                            Philippines.
+                            Became a World Cosplay Summit Ambassador
+                            of the Philippines.
                         </p>
+
                     </article>
 
                     <article class="timeline-card">
-                        <span class="timeline-year">Present</span>
-                        <h3>International Cosplay Guest</h3>
+
+                        <span class="timeline-year">
+                            Present
+                        </span>
+
+                        <h3>
+                            International Cosplay Guest
+                        </h3>
+
                         <p>
-                            Continues appearing at events, conventions, and
-                            cosplay programs around the world.
+                            Continues appearing at events,
+                            conventions, and cosplay programs
+                            around the world.
                         </p>
+
                     </article>
 
                 </div>
@@ -315,506 +406,705 @@
             </div>
 
         </section>
-        <section class="achievements-section section" id="achievements">
 
-    <div class="achievements-background">
-        <span class="achievement-orb achievement-orb-one"></span>
-        <span class="achievement-orb achievement-orb-two"></span>
-    </div>
+        <!-- ACHIEVEMENTS -->
+
+        <section
+            class="achievements-section section"
+            id="achievements"
+        >
+
+            <div class="achievements-background">
+
+                <span
+                    class="achievement-orb achievement-orb-one"
+                ></span>
+
+                <span
+                    class="achievement-orb achievement-orb-two"
+                ></span>
+
+            </div>
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <p class="section-label">
+                        Achievements
+                    </p>
+
+                    <h2>
+                        Milestones earned across the cosplay world.
+                    </h2>
+
+                    <p class="section-description">
+                        From national competitions to international
+                        stages, Miho continues to represent Filipino
+                        cosplay through artistry, performance,
+                        and dedication.
+                    </p>
+
+                </div>
+
+                <div class="achievement-highlights">
+
+                    <article class="achievement-feature-card">
+
+                        <div class="achievement-feature-icon">
+                            🏆
+                        </div>
+
+                        <div class="achievement-feature-content">
+
+                            <p class="achievement-feature-label">
+                                Major Milestone
+                            </p>
+
+                            <h3>
+                                World Cosplay Summit Philippine
+                                Representative
+                            </h3>
+
+                            <p>
+                                Miho represented the Philippines at
+                                the World Cosplay Summit in Japan
+                                in 2014.
+                            </p>
+
+                            <div class="achievement-feature-meta">
+                                <span>Japan</span>
+                                <span>2014</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <div class="achievement-counters">
+
+                        <article class="achievement-counter-card">
+                            <strong>10+</strong>
+                            <span>Years of Cosplay</span>
+                        </article>
+
+                        <article class="achievement-counter-card">
+                            <strong>7+</strong>
+                            <span>Countries Reached</span>
+                        </article>
+
+                        <article class="achievement-counter-card">
+                            <strong>30+</strong>
+                            <span>Events and Appearances</span>
+                        </article>
+
+                        <article class="achievement-counter-card">
+                            <strong>2012</strong>
+                            <span>Journey Started</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <div class="achievements-grid">
+
+                    <article class="achievement-card">
+
+                        <div class="achievement-card-top">
+                            <span class="achievement-year">2013</span>
+                            <span class="achievement-symbol">✦</span>
+                        </div>
+
+                        <div class="achievement-icon">
+                            🥇
+                        </div>
+
+                        <h3>
+                            Mindanao Cyber Expo Champion
+                        </h3>
+
+                        <p>
+                            Won the cosplay championship at
+                            Mindanao Cyber Expo.
+                        </p>
+
+                        <span class="achievement-location">
+                            Philippines
+                        </span>
+
+                    </article>
+
+                    <article class="achievement-card">
+
+                        <div class="achievement-card-top">
+                            <span class="achievement-year">2014</span>
+                            <span class="achievement-symbol">✦</span>
+                        </div>
+
+                        <div class="achievement-icon">
+                            🇵🇭
+                        </div>
+
+                        <h3>
+                            World Cosplay Summit Representative
+                        </h3>
+
+                        <p>
+                            Represented the Philippines at one
+                            of the world’s most prestigious
+                            cosplay events.
+                        </p>
+
+                        <span class="achievement-location">
+                            Japan
+                        </span>
+
+                    </article>
+
+                    <article class="achievement-card">
+
+                        <div class="achievement-card-top">
+                            <span class="achievement-year">2018</span>
+                            <span class="achievement-symbol">✦</span>
+                        </div>
+
+                        <div class="achievement-icon">
+                            🌸
+                        </div>
+
+                        <h3>
+                            World Cosplay Summit Alumni Guest
+                        </h3>
+
+                        <p>
+                            Returned to Japan as an alumni guest
+                            of the World Cosplay Summit.
+                        </p>
+
+                        <span class="achievement-location">
+                            Japan
+                        </span>
+
+                    </article>
+
+                    <article class="achievement-card">
+
+                        <div class="achievement-card-top">
+                            <span class="achievement-year">2019</span>
+                            <span class="achievement-symbol">✦</span>
+                        </div>
+
+                        <div class="achievement-icon">
+                            🎖️
+                        </div>
+
+                        <h3>
+                            Philippine Cosplay Ambassador
+                        </h3>
+
+                        <p>
+                            Became a World Cosplay Summit
+                            Ambassador of the Philippines.
+                        </p>
+
+                        <span class="achievement-location">
+                            Japan
+                        </span>
+
+                    </article>
+
+                    <article class="achievement-card">
+
+                        <div class="achievement-card-top">
+                            <span class="achievement-year">2020</span>
+                            <span class="achievement-symbol">✦</span>
+                        </div>
+
+                        <div class="achievement-icon">
+                            ⚔️
+                        </div>
+
+                        <h3>
+                            Honkai Impact Cosplay Champion
+                        </h3>
+
+                        <p>
+                            Earned championship recognition
+                            through a Honkai Impact cosplay
+                            competition.
+                        </p>
+
+                        <span class="achievement-location">
+                            Online
+                        </span>
+
+                    </article>
+
+                    <article class="achievement-card">
+
+                        <div class="achievement-card-top">
+                            <span class="achievement-year">2022</span>
+                            <span class="achievement-symbol">✦</span>
+                        </div>
+
+                        <div class="achievement-icon">
+                            🏅
+                        </div>
+
+                        <h3>
+                            Cosplay De Zero Umigomi Winner
+                        </h3>
+
+                        <p>
+                            Received international recognition
+                            through the Japanese cosplay competition.
+                        </p>
+
+                        <span class="achievement-location">
+                            Japan
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- COSPLAY GALLERY -->
+
+        <section
+            class="gallery-preview section"
+            id="gallery"
+        >
+
+            <div
+                class="gallery-decoration gallery-decoration-one"
+            ></div>
+
+            <div
+                class="gallery-decoration gallery-decoration-two"
+            ></div>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Cosplay Archive
+                    </p>
+
+                    <h2>
+                        Explore the characters Miho has
+                        brought to life.
+                    </h2>
+
+                    <p class="gallery-introduction">
+                        Browse Miho’s cosplay collection from
+                        anime, games, competitions, and
+                        creative projects.
+                    </p>
+
+                </div>
+
+                <div
+                    class="gallery-filters"
+                    id="galleryFilters"
+                    aria-label="Cosplay gallery filters"
+                >
+
+                    <button
+                        class="gallery-filter active"
+                        type="button"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="gallery-filter"
+                        type="button"
+                        data-filter="genshin-impact"
+                    >
+                        Genshin Impact
+                    </button>
+
+                    <button
+                        class="gallery-filter"
+                        type="button"
+                        data-filter="league-of-legends"
+                    >
+                        League of Legends
+                    </button>
+
+                    <button
+                        class="gallery-filter"
+                        type="button"
+                        data-filter="honkai"
+                    >
+                        Honkai
+                    </button>
+
+                    <button
+                        class="gallery-filter"
+                        type="button"
+                        data-filter="anime"
+                    >
+                        Anime
+                    </button>
+
+                    <button
+                        class="gallery-filter"
+                        type="button"
+                        data-filter="games"
+                    >
+                        Games
+                    </button>
+
+                    <button
+                        class="gallery-filter"
+                        type="button"
+                        data-filter="other"
+                    >
+                        Other
+                    </button>
+
+                </div>
+
+                <div
+                    class="cosplay-gallery"
+                    id="cosplayGallery"
+                    aria-live="polite"
+                >
+
+                    <div class="gallery-loading">
+
+                        <span class="gallery-loading-icon">
+                            ✦
+                        </span>
+
+                        <p>
+                            Loading cosplay archive...
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p
+                    class="gallery-empty"
+                    id="galleryEmpty"
+                >
+                    No cosplays are available in this category yet.
+                </p>
+
+            </div>
+
+        </section>
+        <section class="events-section section" id="events">
+
+    <div class="events-glow events-glow-one"></div>
+    <div class="events-glow events-glow-two"></div>
 
     <div class="container">
 
         <div class="section-heading centered">
 
             <p class="section-label">
-                Achievements
+                Past Guestings & Events
             </p>
 
             <h2>
-                Milestones earned across the cosplay world.
+                A cosplay journey across local and international stages.
             </h2>
 
             <p class="section-description">
-                From national competitions to international stages,
-                Miho continues to represent Filipino cosplay through
-                artistry, performance, and dedication.
+                Explore Miho’s competitions, championships, guest
+                appearances, judging engagements, and international
+                milestones through the years.
             </p>
 
         </div>
 
-        <div class="achievement-highlights">
+        <div class="events-feature">
 
-            <article class="achievement-feature-card">
+            <div class="events-feature-content">
 
-                <div class="achievement-feature-icon">
-                    🏆
+                <span class="events-feature-label">
+                    International Milestone
+                </span>
+
+                <h3>
+                    World Cosplay Summit
+                </h3>
+
+                <p>
+                    Miho represented the Philippines at the World
+                    Cosplay Summit in Japan in 2014. She later returned
+                    as an alumni guest, Philippine ambassador, and
+                    international guest.
+                </p>
+
+                <div class="events-feature-tags">
+                    <span>Japan</span>
+                    <span>Representative</span>
+                    <span>Alumni Guest</span>
+                    <span>Ambassador</span>
                 </div>
 
-                <div class="achievement-feature-content">
+            </div>
 
-                    <p class="achievement-feature-label">
-                        Major Milestone
-                    </p>
+            <div class="events-feature-year">
+                <span>Journey Since</span>
+                <strong>2012</strong>
+            </div>
 
-                    <h3>
-                        World Cosplay Summit Philippine Representative
-                    </h3>
+        </div>
 
-                    <p>
-                        Miho represented the Philippines at the World
-                        Cosplay Summit in Japan in 2014.
-                    </p>
+        <div class="events-toolbar">
 
-                    <div class="achievement-feature-meta">
-                        <span>Japan</span>
-                        <span>2014</span>
-                    </div>
+            <div
+                class="events-tabs"
+                id="eventsTabs"
+                aria-label="Filter past events"
+            >
+                <button
+                    class="events-tab active"
+                    type="button"
+                    data-event-filter="all"
+                >
+                    All
+                </button>
 
-                </div>
+                <button
+                    class="events-tab"
+                    type="button"
+                    data-event-filter="international"
+                >
+                    International
+                </button>
 
-            </article>
+                <button
+                    class="events-tab"
+                    type="button"
+                    data-event-filter="local"
+                >
+                    Philippines
+                </button>
 
-            <div class="achievement-counters">
+                <button
+                    class="events-tab"
+                    type="button"
+                    data-event-filter="competition"
+                >
+                    Competitions
+                </button>
 
-                <article class="achievement-counter-card">
-                    <strong>10+</strong>
-                    <span>Years of Cosplay</span>
-                </article>
+                <button
+                    class="events-tab"
+                    type="button"
+                    data-event-filter="guest"
+                >
+                    Guestings
+                </button>
 
-                <article class="achievement-counter-card">
-                    <strong>7+</strong>
-                    <span>Countries Reached</span>
-                </article>
+                <button
+                    class="events-tab"
+                    type="button"
+                    data-event-filter="judge"
+                >
+                    Judging
+                </button>
+            </div>
 
-                <article class="achievement-counter-card">
-                    <strong>30+</strong>
-                    <span>Events and Appearances</span>
-                </article>
+            <div class="events-search">
 
-                <article class="achievement-counter-card">
-                    <strong>2012</strong>
-                    <span>Journey Started</span>
-                </article>
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    id="eventsSearch"
+                    placeholder="Search event, city, or country..."
+                    aria-label="Search past events"
+                    autocomplete="off"
+                >
 
             </div>
 
         </div>
 
-        <div class="achievements-grid">
-
-            <article class="achievement-card">
-
-                <div class="achievement-card-top">
-
-                    <span class="achievement-year">
-                        2013
-                    </span>
-
-                    <span class="achievement-symbol">
-                        ✦
-                    </span>
-
-                </div>
-
-                <div class="achievement-icon">
-                    🥇
-                </div>
-
-                <h3>
-                    Mindanao Cyber Expo Champion
-                </h3>
-
-                <p>
-                    Won the cosplay championship at Mindanao Cyber
-                    Expo.
-                </p>
-
-                <span class="achievement-location">
-                    Philippines
-                </span>
-
-            </article>
-
-            <article class="achievement-card">
-
-                <div class="achievement-card-top">
-
-                    <span class="achievement-year">
-                        2014
-                    </span>
-
-                    <span class="achievement-symbol">
-                        ✦
-                    </span>
-
-                </div>
-
-                <div class="achievement-icon">
-                    🇵🇭
-                </div>
-
-                <h3>
-                    World Cosplay Summit Representative
-                </h3>
-
-                <p>
-                    Represented the Philippines at one of the world's
-                    most prestigious cosplay events.
-                </p>
-
-                <span class="achievement-location">
-                    Japan
-                </span>
-
-            </article>
-
-            <article class="achievement-card">
-
-                <div class="achievement-card-top">
-
-                    <span class="achievement-year">
-                        2018
-                    </span>
-
-                    <span class="achievement-symbol">
-                        ✦
-                    </span>
-
-                </div>
-
-                <div class="achievement-icon">
-                    🌸
-                </div>
-
-                <h3>
-                    World Cosplay Summit Alumni Guest
-                </h3>
-
-                <p>
-                    Returned to Japan as an alumni guest of the World
-                    Cosplay Summit.
-                </p>
-
-                <span class="achievement-location">
-                    Japan
-                </span>
-
-            </article>
-
-            <article class="achievement-card">
-
-                <div class="achievement-card-top">
-
-                    <span class="achievement-year">
-                        2019
-                    </span>
-
-                    <span class="achievement-symbol">
-                        ✦
-                    </span>
-
-                </div>
-
-                <div class="achievement-icon">
-                    🎖️
-                </div>
-
-                <h3>
-                    Philippine Cosplay Ambassador
-                </h3>
-
-                <p>
-                    Became a World Cosplay Summit Ambassador of the
-                    Philippines.
-                </p>
-
-                <span class="achievement-location">
-                    Japan
-                </span>
-
-            </article>
-
-            <article class="achievement-card">
-
-                <div class="achievement-card-top">
-
-                    <span class="achievement-year">
-                        2020
-                    </span>
-
-                    <span class="achievement-symbol">
-                        ✦
-                    </span>
-
-                </div>
-
-                <div class="achievement-icon">
-                    ⚔️
-                </div>
-
-                <h3>
-                    Honkai Impact Cosplay Champion
-                </h3>
-
-                <p>
-                    Earned championship recognition through a
-                    Honkai Impact cosplay competition.
-                </p>
-
-                <span class="achievement-location">
-                    Online
-                </span>
-
-            </article>
-
-            <article class="achievement-card">
-
-                <div class="achievement-card-top">
-
-                    <span class="achievement-year">
-                        2022
-                    </span>
-
-                    <span class="achievement-symbol">
-                        ✦
-                    </span>
-
-                </div>
-
-                <div class="achievement-icon">
-                    🏅
-                </div>
-
-                <h3>
-                    Cosplay De Zero Umigomi Winner
-                </h3>
-
-                <p>
-                    Received international recognition through the
-                    Japanese cosplay competition.
-                </p>
-
-                <span class="achievement-location">
-                    Japan
-                </span>
-
-            </article>
-
-        </div>
-
-        </div>
-
-    </section>
-
-        <section class="gallery-preview section" id="gallery">
-
-    <div class="gallery-decoration gallery-decoration-one"></div>
-    <div class="gallery-decoration gallery-decoration-two"></div>
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="section-label">
-                Cosplay Archive
+        <div class="events-summary">
+
+            <p>
+                Showing
+                <strong id="eventsVisibleCount">0</strong>
+                appearances
             </p>
 
-            <h2>
-                Explore the characters Miho has brought to life.
-            </h2>
-
-            <p class="gallery-introduction">
-                Browse Miho’s cosplay collection from anime, games,
-                competitions, and creative projects.
-            </p>
+            <select
+                id="eventsYearFilter"
+                aria-label="Filter events by year"
+            >
+                <option value="all">All years</option>
+            </select>
 
         </div>
 
         <div
-            class="gallery-filters"
-            id="galleryFilters"
-            aria-label="Cosplay gallery filters"
+            class="events-grid"
+            id="eventsGrid"
+            aria-live="polite"
         >
+            <div class="events-loading">
+                <span>✦</span>
+                <p>Loading past appearances...</p>
+            </div>
+        </div>
+
+        <div class="events-empty" id="eventsEmpty">
+            <span>✧</span>
+            <h3>No appearances found</h3>
+            <p>Try another category, year, or search term.</p>
+        </div>
+
+    </div>
+
+        </section>
+        <section
+    class="partnerships-section section"
+    id="partnerships"
+>
+
+    <div
+        class="partnerships-decoration partnerships-decoration-one"
+    ></div>
+
+    <div
+        class="partnerships-decoration partnerships-decoration-two"
+    ></div>
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <p class="section-label">
+                Partnerships
+            </p>
+
+            <h2>
+                Collaborations across cosplay, gaming, and entertainment.
+            </h2>
+
+            <p class="section-description">
+                Selected ambassador roles, creative campaigns,
+                gaming partnerships, and brand collaborations
+                throughout Miho’s career.
+            </p>
+
+        </div>
+
+        <div class="partnership-feature">
+
+            <div class="partnership-feature-copy">
+
+                <p class="partnership-feature-label">
+                    Creative Collaborations
+                </p>
+
+                <h3>
+                    Bringing game worlds and characters into reality.
+                </h3>
+
+                <p>
+                    Miho has collaborated with gaming publishers,
+                    technology brands, entertainment platforms,
+                    and cosplay communities through character
+                    portrayals, ambassador roles, and campaigns.
+                </p>
+
+            </div>
+
+            <div class="partnership-feature-symbol">
+                ✦
+            </div>
+
+        </div>
+
+        <div class="partnership-tabs">
+
             <button
-                class="gallery-filter active"
+                class="partnership-tab active"
                 type="button"
-                data-filter="all"
+                data-partnership-filter="all"
             >
                 All
             </button>
 
             <button
-                class="gallery-filter"
+                class="partnership-tab"
                 type="button"
-                data-filter="genshin-impact"
+                data-partnership-filter="ambassador"
             >
-                Genshin Impact
+                Ambassador Roles
             </button>
 
             <button
-                class="gallery-filter"
+                class="partnership-tab"
                 type="button"
-                data-filter="league-of-legends"
+                data-partnership-filter="gaming"
             >
-                League of Legends
+                Gaming
             </button>
 
             <button
-                class="gallery-filter"
+                class="partnership-tab"
                 type="button"
-                data-filter="honkai"
+                data-partnership-filter="technology"
             >
-                Honkai
+                Technology
             </button>
 
             <button
-                class="gallery-filter"
+                class="partnership-tab"
                 type="button"
-                data-filter="anime"
+                data-partnership-filter="platform"
             >
-                Anime
-            </button>
-
-            <button
-                class="gallery-filter"
-                type="button"
-                data-filter="games"
-            >
-                Games
-            </button>
-
-            <button
-                class="gallery-filter"
-                type="button"
-                data-filter="other"
-            >
-                Other
+                Platforms
             </button>
         </div>
 
         <div
-            class="cosplay-gallery"
-            id="cosplayGallery"
+            class="partnership-grid"
+            id="partnershipGrid"
             aria-live="polite"
         >
-            <div class="gallery-loading">
-                <span class="gallery-loading-icon">✦</span>
-                <p>Loading cosplay archive...</p>
+            <div class="partnership-loading">
+                <span>✦</span>
+                <p>Loading partnerships...</p>
             </div>
         </div>
 
-        <p class="gallery-empty" id="galleryEmpty">
-            No cosplays are available in this category yet.
-        </p>
-
-    </div>
-
-</section>
-
-<div
-    class="cosplay-lightbox"
-    id="cosplayLightbox"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="lightboxCharacter"
-    aria-hidden="true"
->
-    <button
-        class="lightbox-close"
-        id="lightboxClose"
-        type="button"
-        aria-label="Close cosplay viewer"
-    >
-        ×
-    </button>
-
-    <button
-        class="lightbox-navigation lightbox-previous"
-        id="lightboxPrevious"
-        type="button"
-        aria-label="View previous cosplay"
-    >
-        ‹
-    </button>
-
-    <div class="lightbox-content">
-
-        <div class="lightbox-image-area">
-
-            <div class="lightbox-image-glow"></div>
-
-            <img
-                src=""
-                alt=""
-                class="lightbox-image"
-                id="lightboxImage"
-            >
-
-        </div>
-
-        <div class="lightbox-details">
-
-            <p class="lightbox-category" id="lightboxCategory">
-                Category
-            </p>
-
-            <h2 id="lightboxCharacter">
-                Character Name
-            </h2>
-
-            <p class="lightbox-series" id="lightboxSeries">
-                Series Name
-            </p>
-
-            <div class="lightbox-divider">
-                <span></span>
-                <strong>✦</strong>
-                <span></span>
-            </div>
-
-            <p class="lightbox-description" id="lightboxDescription">
-                Cosplay description.
-            </p>
-
-            <div class="lightbox-information">
-
-                <div>
-                    <span>Year</span>
-                    <strong id="lightboxYear">—</strong>
-                </div>
-
-                <div>
-                    <span>Type</span>
-                    <strong id="lightboxType">Cosplay</strong>
-                </div>
-
-            </div>
-
-            <p class="lightbox-counter" id="lightboxCounter">
-                1 / 1
-            </p>
-
+        <div
+            class="partnership-empty"
+            id="partnershipEmpty"
+        >
+            No partnerships are available in this category.
         </div>
 
     </div>
-
-    <button
-        class="lightbox-navigation lightbox-next"
-        id="lightboxNext"
-        type="button"
-        aria-label="View next cosplay"
-    >
-        ›
-    </button>
-</div>
 
         </section>
+
+        <!-- CONTACT -->
 
         <section class="contact section" id="contact">
 
             <div class="container contact-box">
 
                 <div>
+
                     <p class="section-label">
                         Contact
                     </p>
@@ -824,9 +1114,10 @@
                     </h2>
 
                     <p>
-                        For guest appearances, partnerships, cosplay projects,
-                        and professional inquiries.
+                        For guest appearances, partnerships,
+                        cosplay projects, and professional inquiries.
                     </p>
+
                 </div>
 
                 <a
@@ -842,6 +1133,121 @@
 
     </main>
 
+    <!-- GALLERY LIGHTBOX -->
+
+    <div
+        class="cosplay-lightbox"
+        id="cosplayLightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lightboxCharacter"
+        aria-hidden="true"
+    >
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            type="button"
+            aria-label="Close cosplay viewer"
+        >
+            ×
+        </button>
+
+        <button
+            class="lightbox-navigation lightbox-previous"
+            id="lightboxPrevious"
+            type="button"
+            aria-label="View previous cosplay"
+        >
+            ‹
+        </button>
+
+        <div class="lightbox-content">
+
+            <div class="lightbox-image-area">
+
+                <div class="lightbox-image-glow"></div>
+
+                <img
+                    src=""
+                    alt=""
+                    class="lightbox-image"
+                    id="lightboxImage"
+                >
+
+            </div>
+
+            <div class="lightbox-details">
+
+                <p
+                    class="lightbox-category"
+                    id="lightboxCategory"
+                >
+                    Category
+                </p>
+
+                <h2 id="lightboxCharacter">
+                    Character Name
+                </h2>
+
+                <p
+                    class="lightbox-series"
+                    id="lightboxSeries"
+                >
+                    Series Name
+                </p>
+
+                <div class="lightbox-divider">
+                    <span></span>
+                    <strong>✦</strong>
+                    <span></span>
+                </div>
+
+                <p
+                    class="lightbox-description"
+                    id="lightboxDescription"
+                >
+                    Cosplay description.
+                </p>
+
+                <div class="lightbox-information">
+
+                    <div>
+                        <span>Year</span>
+                        <strong id="lightboxYear">—</strong>
+                    </div>
+
+                    <div>
+                        <span>Type</span>
+                        <strong id="lightboxType">Cosplay</strong>
+                    </div>
+
+                </div>
+
+                <p
+                    class="lightbox-counter"
+                    id="lightboxCounter"
+                >
+                    1 / 1
+                </p>
+
+            </div>
+
+        </div>
+
+        <button
+            class="lightbox-navigation lightbox-next"
+            id="lightboxNext"
+            type="button"
+            aria-label="View next cosplay"
+        >
+            ›
+        </button>
+
+    </div>
+
+    <!-- FOOTER -->
+
     <footer class="site-footer">
 
         <div class="container footer-content">
@@ -855,6 +1261,7 @@
             </p>
 
             <div class="footer-links">
+
                 <a
                     href="https://www.facebook.com/mingmihocosplay"
                     target="_blank"
@@ -863,13 +1270,20 @@
                     Facebook
                 </a>
 
-                <a href="#" aria-label="Miho Instagram">
+                <a
+                    href="#"
+                    aria-label="Miho Instagram"
+                >
                     Instagram
                 </a>
 
-                <a href="#" aria-label="Miho TikTok">
+                <a
+                    href="#"
+                    aria-label="Miho TikTok"
+                >
                     TikTok
                 </a>
+
             </div>
 
         </div>
@@ -878,5 +1292,9 @@
 
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/partnerships.js"></script>
+
 </body>
+
 </html>

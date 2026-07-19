@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "name": "Character Name",
+        "series": "Genshin Impact",
+        "category": "genshin-impact",
+        "categoryLabel": "Genshin Impact",
+        "year": "2024",
+        "type": "Game Cosplay",
+        "rarity": 5,
+        "difficulty": 5,
+        "image": "images/characters/character-1.jpg",
+        "description": "A fantasy-inspired cosplay featuring detailed styling, costume work, and character expression."
+    },
+    {
+        "id": 2,
+        "name": "Character Name",
+        "series": "League of Legends",
+        "category": "league-of-legends",
+        "categoryLabel": "League of Legends",
+        "year": "2023",
+        "type": "Game Cosplay",
+        "rarity": 5,
+        "difficulty": 4,
+        "image": "images/characters/character-2.jpg",
+        "description": "Miho recreates an iconic League of Legends character through costume, makeup, and performance."
+    },
+    {
+        "id": 3,
+        "name": "Character Name",
+        "series": "Honkai Impact",
+        "category": "honkai",
+        "categoryLabel": "Honkai",
+        "year": "2020",
+        "type": "Competition Cosplay",
+        "rarity": 5,
+        "difficulty": 5,
+        "image": "images/characters/character-3.jpg",
+        "description": "A competition cosplay inspired by the futuristic world and character designs of Honkai Impact."
+    },
+    {
+        "id": 4,
+        "name": "Character Name",
+        "series": "Anime Series",
+        "category": "anime",
+        "categoryLabel": "Anime",
+        "year": "2022",
+        "type": "Anime Cosplay",
+        "rarity": 4,
+        "difficulty": 3,
+        "image": "images/characters/character-4.jpg",
+        "description": "An anime character brought to life through expressive posing, styling, and costume accuracy."
+    },
+    {
+        "id": 5,
+        "name": "Character Name",
+        "series": "Game Title",
+        "category": "games",
+        "categoryLabel": "Games",
+        "year": "2021",
+        "type": "Game Cosplay",
+        "rarity": 4,
+        "difficulty": 4,
+        "image": "images/characters/character-5.jpg",
+        "description": "A game-inspired cosplay highlighting Miho's creativity and attention to visual details."
+    },
+    {
+        "id": 6,
+        "name": "Original Character",
+        "series": "Creative Project",
+        "category": "other",
+        "categoryLabel": "Other",
+        "year": "2024",
+        "type": "Creative Cosplay",
+        "rarity": 5,
+        "difficulty": 4,
+        "image": "images/characters/character-6.jpg",
+        "description": "An original creative concept featuring unique styling, costume design, and visual storytelling."
+    }
+]

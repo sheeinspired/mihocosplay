@@ -1,0 +1,170 @@
+[
+    {
+        "name": "Migme",
+        "year": "2016",
+        "category": "ambassador",
+        "categoryLabel": "Ambassador Role",
+        "role": "Cosplay Ambassador",
+        "symbol": "M"
+    },
+    {
+        "name": "Drawcrowd",
+        "year": "2017",
+        "category": "ambassador",
+        "categoryLabel": "Ambassador Role",
+        "role": "Cosplay Ambassador",
+        "symbol": "D"
+    },
+    {
+        "name": "Pocket Live",
+        "year": "2018",
+        "category": "platform",
+        "categoryLabel": "Digital Platform",
+        "role": "Partner",
+        "symbol": "P"
+    },
+    {
+        "name": "E-Sports and Gaming Summit",
+        "year": "2018–2019",
+        "category": "gaming",
+        "categoryLabel": "Gaming Event",
+        "role": "Cosplay Collaboration",
+        "symbol": "E"
+    },
+    {
+        "name": "The Alchemist Code",
+        "year": "2018",
+        "category": "ambassador",
+        "categoryLabel": "Game Ambassador",
+        "role": "Ouroboros Cosplay Ambassador",
+        "symbol": "A"
+    },
+    {
+        "name": "Final Fantasy Brave Exvius",
+        "year": "2019",
+        "category": "ambassador",
+        "categoryLabel": "Game Ambassador",
+        "role": "Fina Cosplay Ambassador",
+        "symbol": "F"
+    },
+    {
+        "name": "Acoslasia Tokyo Japan Fashion",
+        "year": "2021",
+        "category": "ambassador",
+        "categoryLabel": "Fashion Collaboration",
+        "role": "Cosplay and Fashion Partnership",
+        "symbol": "A"
+    },
+    {
+        "name": "Riot Games",
+        "year": "",
+        "category": "gaming",
+        "categoryLabel": "Gaming",
+        "role": "Brand Collaboration",
+        "symbol": "R"
+    },
+    {
+        "name": "Alienware",
+        "year": "",
+        "category": "technology",
+        "categoryLabel": "Technology",
+        "role": "Brand Collaboration",
+        "symbol": "A"
+    },
+    {
+        "name": "Bilibili",
+        "year": "",
+        "category": "platform",
+        "categoryLabel": "Entertainment Platform",
+        "role": "Brand Collaboration",
+        "symbol": "B"
+    },
+    {
+        "name": "miHoYo",
+        "year": "",
+        "category": "gaming",
+        "categoryLabel": "Gaming",
+        "role": "Game Collaboration",
+        "symbol": "M"
+    },
+    {
+        "name": "Perfect World",
+        "year": "",
+        "category": "gaming",
+        "categoryLabel": "Gaming",
+        "role": "Game Collaboration",
+        "symbol": "P"
+    },
+    {
+        "name": "Yostar",
+        "year": "",
+        "category": "gaming",
+        "categoryLabel": "Gaming",
+        "role": "Game Collaboration",
+        "symbol": "Y"
+    },
+    {
+        "name": "OXGN",
+        "year": "",
+        "category": "platform",
+        "categoryLabel": "Lifestyle Brand",
+        "role": "Brand Collaboration",
+        "symbol": "O"
+    },
+    {
+        "name": "Secretlab",
+        "year": "",
+        "category": "technology",
+        "categoryLabel": "Gaming Technology",
+        "role": "Brand Collaboration",
+        "symbol": "S"
+    },
+    {
+        "name": "X-Legend Entertainment",
+        "year": "",
+        "category": "gaming",
+        "categoryLabel": "Gaming",
+        "role": "Game Collaboration",
+        "symbol": "X"
+    },
+    {
+        "name": "24 Entertainment",
+        "year": "",
+        "category": "gaming",
+        "categoryLabel": "Gaming",
+        "role": "Game Collaboration",
+        "symbol": "24"
+    },
+    {
+        "name": "Shift Up",
+        "year": "",
+        "category": "gaming",
+        "categoryLabel": "Gaming",
+        "role": "Game Collaboration",
+        "symbol": "S"
+    },
+    {
+        "name": "Kumu",
+        "year": "",
+        "category": "platform",
+        "categoryLabel": "Digital Platform",
+        "role": "Platform Collaboration",
+        "symbol": "K"
+    },
+    {
+        "name": "Globe",
+        "year": "",
+        "category": "technology",
+        "categoryLabel": "Telecommunications",
+        "role": "Brand Collaboration",
+        "symbol": "G"
+    },
+    {
+        "name": "DITO",
+        "year": "",
+        "category": "technology",
+        "categoryLabel": "Telecommunications",
+        "role": "Brand Collaboration",
+        "symbol": "D"
+    }
+]
