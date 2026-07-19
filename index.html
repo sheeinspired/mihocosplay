@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/events.css">
     <link rel="stylesheet" href="css/global-reach.css">
     <link rel="stylesheet" href="css/partnerships.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -1421,6 +1422,199 @@
 
         </section>
 
+        <!-- MEDIA FEATURES -->
+
+<section
+    class="media-section section"
+    id="media"
+>
+
+    <div class="media-decoration media-decoration-one"></div>
+    <div class="media-decoration media-decoration-two"></div>
+
+    <div class="container">
+
+        <div class="media-heading">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Media Features
+                </p>
+
+                <h2>
+                    Stories, interviews, and creative features.
+                </h2>
+
+            </div>
+
+            <p class="media-introduction">
+                Explore selected interviews, articles, campaigns,
+                video appearances, and media features highlighting
+                Miho’s cosplay journey.
+            </p>
+
+        </div>
+
+        <div class="media-featured-card">
+
+            <div class="media-featured-content">
+
+                <p class="media-featured-label">
+                    Featured Spotlight
+                </p>
+
+                <h3>
+                    Celebrating Filipino creativity through cosplay.
+                </h3>
+
+                <p>
+                    Miho’s artistry and international cosplay journey
+                    have led to collaborations and features across
+                    gaming, entertainment, digital media, and
+                    cosplay communities.
+                </p>
+
+                <div class="media-featured-tags">
+                    <span>Interviews</span>
+                    <span>Campaigns</span>
+                    <span>Videos</span>
+                    <span>Articles</span>
+                </div>
+
+            </div>
+
+            <div class="media-featured-symbol">
+                ✦
+            </div>
+
+        </div>
+
+        <div class="media-toolbar">
+
+            <div
+                class="media-filters"
+                id="mediaFilters"
+                aria-label="Filter media features"
+            >
+
+                <button
+                    class="media-filter active"
+                    type="button"
+                    data-media-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="media-filter"
+                    type="button"
+                    data-media-filter="interview"
+                >
+                    Interviews
+                </button>
+
+                <button
+                    class="media-filter"
+                    type="button"
+                    data-media-filter="article"
+                >
+                    Articles
+                </button>
+
+                <button
+                    class="media-filter"
+                    type="button"
+                    data-media-filter="video"
+                >
+                    Videos
+                </button>
+
+                <button
+                    class="media-filter"
+                    type="button"
+                    data-media-filter="campaign"
+                >
+                    Campaigns
+                </button>
+
+                <button
+                    class="media-filter"
+                    type="button"
+                    data-media-filter="feature"
+                >
+                    Features
+                </button>
+
+            </div>
+
+            <div class="media-search">
+
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    id="mediaSearch"
+                    placeholder="Search media features..."
+                    aria-label="Search media features"
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </div>
+
+        <div class="media-summary">
+
+            <p>
+                Showing
+                <strong id="mediaVisibleCount">0</strong>
+                media features
+            </p>
+
+            <select
+                id="mediaYearFilter"
+                aria-label="Filter media features by year"
+            >
+                <option value="all">
+                    All years
+                </option>
+            </select>
+
+        </div>
+
+        <div
+            class="media-grid"
+            id="mediaGrid"
+            aria-live="polite"
+        >
+
+            <div class="media-loading">
+                <span>✦</span>
+                <p>Loading media features...</p>
+            </div>
+
+        </div>
+
+        <div
+            class="media-empty"
+            id="mediaEmpty"
+        >
+            <span>✧</span>
+
+            <h3>
+                No media features found
+            </h3>
+
+            <p>
+                Try another category, year, or search term.
+            </p>
+        </div>
+
+    </div>
+
+        </section>
+
         <!-- CONTACT -->
 
         <section class="contact section" id="contact">
@@ -1570,6 +1764,110 @@
 
     </div>
 
+    <!-- MEDIA MODAL -->
+
+<div
+    class="media-modal"
+    id="mediaModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="mediaModalTitle"
+    aria-hidden="true"
+>
+
+    <div
+        class="media-modal-overlay"
+        id="mediaModalOverlay"
+    ></div>
+
+    <div class="media-modal-panel">
+
+        <button
+            class="media-modal-close"
+            id="mediaModalClose"
+            type="button"
+            aria-label="Close media feature"
+        >
+            ×
+        </button>
+
+        <div class="media-modal-visual">
+
+            <img
+                src=""
+                alt=""
+                id="mediaModalImage"
+            >
+
+            <div class="media-modal-image-placeholder">
+                <span id="mediaModalSymbol">M</span>
+            </div>
+
+        </div>
+
+        <div class="media-modal-content">
+
+            <p
+                class="media-modal-category"
+                id="mediaModalCategory"
+            >
+                Media Feature
+            </p>
+
+            <h2 id="mediaModalTitle">
+                Feature Title
+            </h2>
+
+            <p
+                class="media-modal-publisher"
+                id="mediaModalPublisher"
+            >
+                Publisher
+            </p>
+
+            <div class="media-modal-divider">
+                <span></span>
+                <strong>✦</strong>
+                <span></span>
+            </div>
+
+            <p
+                class="media-modal-description"
+                id="mediaModalDescription"
+            >
+                Description
+            </p>
+
+            <div class="media-modal-information">
+
+                <div>
+                    <span>Year</span>
+                    <strong id="mediaModalYear">—</strong>
+                </div>
+
+                <div>
+                    <span>Type</span>
+                    <strong id="mediaModalType">—</strong>
+                </div>
+
+            </div>
+
+            <a
+                href="#"
+                class="button button-primary media-modal-link"
+                id="mediaModalLink"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Visit Feature
+            </a>
+
+        </div>
+
+    </div>
+
+        </div>
+
     <!-- FOOTER -->
 
     <footer class="site-footer">
@@ -1618,6 +1916,7 @@
     <script src="js/gallery.js"></script>
     <script src="js/events.js"></script>
     <script src="js/partnerships.js"></script>
+    <script src="js/media.js"></script>
 
 </body>
 
