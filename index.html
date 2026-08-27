@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +30,11 @@
 <link
   rel="preconnect"
   href="https://fonts.gstatic.com"
+>
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
   crossorigin
 >
 
@@ -49,17 +53,12 @@
 :root{
 
   --ink:#28131d;
-
   --muted:#735462;
-
   --paper:#fff8fb;
-
   --paper2:#fff0f6;
 
   --pink:#ef5f9a;
-
   --pink2:#ff9fc4;
-
   --deep:#b92f6c;
 
   --line:#f3c9da;
@@ -84,8 +83,11 @@
 
 
 html{
+
   scroll-behavior:smooth;
+
   scroll-padding-top:90px;
+
 }
 
 
@@ -99,27 +101,38 @@ body{
 
   font-family:"DM Sans",sans-serif;
 
+  overflow-x:hidden;
+
 }
 
 
 body.no-scroll{
+
   overflow:hidden;
+
 }
 
 
 a{
+
   text-decoration:none;
+
   color:inherit;
+
 }
 
 
 button{
+
   font:inherit;
+
 }
 
 
 img{
+
   max-width:100%;
+
 }
 
 
@@ -166,7 +179,9 @@ h1,
 h2,
 h3,
 p{
+
   margin-top:0;
+
 }
 
 
@@ -229,7 +244,7 @@ h2{
 
 
 /* =====================================================
-   INTRO / ENTER COSPLAY WORLD
+   INTRO
 ===================================================== */
 
 #intro{
@@ -416,6 +431,8 @@ h2{
 
   backdrop-filter:blur(18px);
 
+  -webkit-backdrop-filter:blur(18px);
+
   border-bottom:
     1px solid rgba(243,201,218,.7);
 
@@ -432,6 +449,8 @@ h2{
 
   justify-content:space-between;
 
+  position:relative;
+
 }
 
 
@@ -446,6 +465,8 @@ h2{
   color:var(--deep);
 
   letter-spacing:-.04em;
+
+  flex-shrink:0;
 
 }
 
@@ -476,17 +497,10 @@ h2{
   transition:
     color .25s ease;
 
+  white-space:nowrap;
+
 }
 
-
-/*
-  UNDERLINE
-
-  Every navigation link has an invisible underline.
-
-  When .active is added by JavaScript,
-  the underline grows from the center.
-*/
 
 .nav-link::after{
 
@@ -777,7 +791,7 @@ h2{
 
 
 /* =====================================================
-   SOCIAL MEDIA FOLLOWERS
+   SOCIAL FOLLOWERS
 ===================================================== */
 
 .hero-social-stats{
@@ -962,9 +976,11 @@ h2{
 
   width:max-content;
 
+  will-change:transform;
+
   animation:
     infiniteTextScroll
-    25s
+    24s
     linear
     infinite;
 
@@ -1008,15 +1024,15 @@ h2{
 
 @keyframes infiniteTextScroll{
 
-  from{
+  0%{
 
-    transform:translateX(0);
+    transform:translate3d(0,0,0);
 
   }
 
-  to{
+  100%{
 
-    transform:translateX(-50%);
+    transform:translate3d(-50%,0,0);
 
   }
 
@@ -2245,7 +2261,7 @@ select{
 
 
 /* =====================================================
-   BOTTOM INFINITE PHOTO STRIP
+   BOTTOM PHOTO MARQUEE
 ===================================================== */
 
 .photo-marquee-section{
@@ -2278,9 +2294,11 @@ select{
 
   width:max-content;
 
+  will-change:transform;
+
   animation:
     infinitePhotoScroll
-    38s
+    35s
     linear
     infinite;
 
@@ -2365,15 +2383,15 @@ select{
 
 @keyframes infinitePhotoScroll{
 
-  from{
+  0%{
 
-    transform:translateX(0);
+    transform:translate3d(0,0,0);
 
   }
 
-  to{
+  100%{
 
-    transform:translateX(-50%);
+    transform:translate3d(-50%,0,0);
 
   }
 
@@ -2464,6 +2482,8 @@ select{
     rgba(40,19,29,.82);
 
   backdrop-filter:blur(10px);
+
+  -webkit-backdrop-filter:blur(10px);
 
   display:none;
 
@@ -2594,21 +2614,30 @@ select{
 
 
 /* =====================================================
-   RESPONSIVE
+   TABLET
 ===================================================== */
 
 @media(max-width:1100px){
 
   .nav-links{
+
     gap:15px;
+
   }
 
+
   .nav-link{
+
     font-size:.76rem;
+
   }
 
 }
 
+
+/* =====================================================
+   TABLET / SMALL LAPTOP
+===================================================== */
 
 @media(max-width:900px){
 
@@ -2666,71 +2695,84 @@ select{
   }
 
 
-  .nav-links{
+  /*
+    Keep navigation visible.
+    Instead of hiding it behind a hamburger,
+    allow it to scroll horizontally.
+  */
 
-    display:none;
+  .navbar{
+
+    gap:20px;
 
   }
 
 
   .menu-toggle{
 
-    display:block;
+    display:none;
 
   }
 
 
-  .nav-links.open{
+  .nav-links{
 
     display:flex;
 
-    position:absolute;
+    flex:1;
 
-    top:74px;
+    min-width:0;
 
-    left:0;
+    overflow-x:auto;
 
-    right:0;
+    overflow-y:hidden;
 
-    background:white;
+    justify-content:flex-end;
 
-    padding:22px 24px;
+    gap:22px;
 
-    flex-direction:column;
+    scrollbar-width:none;
 
-    align-items:flex-start;
-
-    border-bottom:
-      1px solid var(--line);
+    -ms-overflow-style:none;
 
   }
 
 
-  .nav-links.open .nav-link{
+  .nav-links::-webkit-scrollbar{
 
-    padding:10px 0;
+    display:none;
 
   }
 
 
-  .nav-links.open .nav-link::after{
+  .nav-link{
 
-    bottom:3px;
+    flex-shrink:0;
+
+    padding:27px 0;
 
   }
 
 }
 
 
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media(max-width:620px){
+
+  body{
+
+    overflow-x:hidden;
+
+  }
+
 
   .container{
 
     width:
-      min(
-        100% - 32px,
-        1180px
-      );
+      calc(100% - 32px);
 
   }
 
@@ -2749,6 +2791,128 @@ select{
   }
 
 
+  /*
+    MOBILE NAVIGATION
+  */
+
+  .site-header{
+
+    position:sticky;
+
+    top:0;
+
+  }
+
+
+  .navbar{
+
+    height:64px;
+
+    width:100%;
+
+    padding-left:16px;
+
+    padding-right:0;
+
+    gap:14px;
+
+  }
+
+
+  .site-logo{
+
+    font-size:1.55rem;
+
+  }
+
+
+  .nav-links{
+
+    flex:1;
+
+    min-width:0;
+
+    width:100%;
+
+    justify-content:flex-start;
+
+    gap:20px;
+
+    padding-right:16px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    -webkit-overflow-scrolling:touch;
+
+    scroll-behavior:smooth;
+
+    scrollbar-width:none;
+
+  }
+
+
+  .nav-links::-webkit-scrollbar{
+
+    display:none;
+
+  }
+
+
+  .nav-link{
+
+    font-size:.72rem;
+
+    padding:24px 0;
+
+    flex-shrink:0;
+
+  }
+
+
+  .nav-link::after{
+
+    bottom:15px;
+
+  }
+
+
+  /*
+    HERO
+  */
+
+  .hero-title{
+
+    font-size:
+      clamp(3.5rem,17vw,5.5rem);
+
+  }
+
+
+  .hero-description{
+
+    font-size:1rem;
+
+  }
+
+
+  .hero-actions{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+  }
+
+
+  .button{
+
+    width:100%;
+
+  }
+
+
   .hero-stats{
 
     gap:16px;
@@ -2763,6 +2927,51 @@ select{
 
   }
 
+
+  /*
+    TEXT MARQUEE
+  */
+
+  .marquee{
+
+    padding:15px 0;
+
+  }
+
+
+  .marquee-track{
+
+    animation-duration:20s;
+
+  }
+
+
+  .marquee-content{
+
+    gap:25px;
+
+    padding-right:25px;
+
+  }
+
+
+  .marquee-content span{
+
+    font-size:.88rem;
+
+  }
+
+
+  .marquee-content b{
+
+    font-size:.8rem;
+
+  }
+
+
+  /*
+    GRIDS
+  */
 
   .timeline-preview,
   .achievements-grid,
@@ -2786,6 +2995,10 @@ select{
   }
 
 
+  /*
+    FEATURE CARDS
+  */
+
   .events-feature,
   .partnership-feature,
   .media-featured-card,
@@ -2802,6 +3015,54 @@ select{
 
   }
 
+
+  /*
+    FILTERS
+  */
+
+  .gallery-filters,
+  .events-tabs,
+  .partnership-tabs,
+  .media-filters{
+
+    flex-wrap:nowrap;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    scrollbar-width:none;
+
+    -webkit-overflow-scrolling:touch;
+
+    padding-bottom:4px;
+
+  }
+
+
+  .gallery-filters::-webkit-scrollbar,
+  .events-tabs::-webkit-scrollbar,
+  .partnership-tabs::-webkit-scrollbar,
+  .media-filters::-webkit-scrollbar{
+
+    display:none;
+
+  }
+
+
+  .gallery-filter,
+  .events-tab,
+  .partnership-tab,
+  .media-filter{
+
+    flex-shrink:0;
+
+  }
+
+
+  /*
+    SEARCH
+  */
 
   .events-toolbar,
   .media-toolbar,
@@ -2825,6 +3086,10 @@ select{
 
   }
 
+
+  /*
+    LIGHTBOX
+  */
 
   .lightbox-panel{
 
@@ -2851,9 +3116,40 @@ select{
   }
 
 
+  /*
+    FOOTER
+  */
+
   .footer-links{
 
     flex-wrap:wrap;
+
+  }
+
+
+  /*
+    BOTTOM PHOTO MARQUEE
+  */
+
+  .photo-marquee{
+
+    overflow:hidden;
+
+  }
+
+
+  .photo-marquee-track{
+
+    animation-duration:28s;
+
+  }
+
+
+  .photo-marquee-group{
+
+    gap:10px;
+
+    padding-right:10px;
 
   }
 
@@ -2864,28 +3160,95 @@ select{
 
     height:250px;
 
+    border-radius:18px;
+
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media(max-width:400px){
+
+  .navbar{
+
+    padding-left:12px;
+
+  }
+
+
+  .site-logo{
+
+    font-size:1.4rem;
+
+  }
+
+
+  .nav-links{
+
+    gap:17px;
+
+  }
+
+
+  .nav-link{
+
+    font-size:.68rem;
+
+  }
+
+
+  .hero-social-stats{
+
+    gap:8px;
+
+  }
+
+
+  .social-stat{
+
+    padding:12px 9px;
+
+  }
+
+
+  .social-stat strong{
+
+    font-size:.95rem;
+
+  }
+
+
+  .social-stat span{
+
+    font-size:.6rem;
+
   }
 
 }
 
 
-@media(prefers-reduced-motion:reduce){
+/* =====================================================
+   IMPORTANT:
+   DO NOT DISABLE THE MARQUEES ON MOBILE
+===================================================== */
 
-  .marquee-track,
-  .photo-marquee-track{
+/*
+   We intentionally do NOT use:
 
-    animation-play-state:paused;
+   @media(prefers-reduced-motion:reduce){
+      .marquee-track,
+      .photo-marquee-track{
+         animation-play-state:paused;
+      }
+   }
 
-  }
-
-
-  html{
-
-    scroll-behavior:auto;
-
-  }
-
-}
+   This keeps the continuous marquee behavior
+   working consistently on phones and tablets.
+*/
 
 </style>
 
@@ -2972,73 +3335,43 @@ select{
       id="navLinks"
     >
 
-      <a
-        href="#home"
-        class="nav-link active"
-      >
+      <a href="#home" class="nav-link active">
         Home
       </a>
 
-      <a
-        href="#about"
-        class="nav-link"
-      >
+      <a href="#about" class="nav-link">
         About
       </a>
 
-      <a
-        href="#journey"
-        class="nav-link"
-      >
+      <a href="#journey" class="nav-link">
         Journey
       </a>
 
-      <a
-        href="#gallery"
-        class="nav-link"
-      >
+      <a href="#gallery" class="nav-link">
         Cosplays
       </a>
 
-      <a
-        href="#achievements"
-        class="nav-link"
-      >
+      <a href="#achievements" class="nav-link">
         Achievements
       </a>
 
-      <a
-        href="#events"
-        class="nav-link"
-      >
+      <a href="#events" class="nav-link">
         Events
       </a>
 
-      <a
-        href="#globalReach"
-        class="nav-link"
-      >
+      <a href="#globalReach" class="nav-link">
         Global
       </a>
 
-      <a
-        href="#partnerships"
-        class="nav-link"
-      >
+      <a href="#partnerships" class="nav-link">
         Partnerships
       </a>
 
-      <a
-        href="#media"
-        class="nav-link"
-      >
+      <a href="#media" class="nav-link">
         Media
       </a>
 
-      <a
-        href="#contact"
-        class="nav-link"
-      >
+      <a href="#contact" class="nav-link">
         Contact
       </a>
 
@@ -3067,13 +3400,11 @@ select{
 
   <div class="container hero-grid">
 
-
     <div class="hero-text reveal">
 
       <p class="eyebrow">
         Filipino Cosplayer · Since 2012
       </p>
-
 
       <h1 class="hero-title">
 
@@ -3083,7 +3414,6 @@ select{
 
       </h1>
 
-
       <p class="hero-description">
 
         Discover the journey, achievements,
@@ -3091,7 +3421,6 @@ select{
         creations of Miho.
 
       </p>
-
 
       <div class="hero-actions">
 
@@ -3102,7 +3431,6 @@ select{
           Explore Her Journey
         </a>
 
-
         <a
           href="#gallery"
           class="button button-secondary"
@@ -3111,7 +3439,6 @@ select{
         </a>
 
       </div>
-
 
       <div class="hero-stats">
 
@@ -3156,10 +3483,7 @@ select{
       </div>
 
 
-      <!-- SOCIAL FOLLOWERS -->
-
       <div class="hero-social-stats">
-
 
         <a
           href="https://www.facebook.com/mingmihocosplay"
@@ -3242,8 +3566,6 @@ select{
           onerror="this.style.display='none'"
         >
 
-
-
       </div>
 
     </div>
@@ -3261,112 +3583,59 @@ select{
 
   <div class="marquee-track">
 
-
-    <!-- FIRST COPY -->
-
     <div class="marquee-content">
 
-      <span>
-        Cosplayer
-      </span>
-
+      <span>Cosplayer</span>
       <b>✦</b>
 
-      <span>
-        Content Creator
-      </span>
-
+      <span>Content Creator</span>
       <b>✦</b>
 
-      <span>
-        Model
-      </span>
-
+      <span>Model</span>
       <b>✦</b>
 
-      <span>
-        Creative Artist
-      </span>
-
+      <span>Creative Artist</span>
       <b>✦</b>
 
-      <span>
-        Cosplayer
-      </span>
-
+      <span>Cosplayer</span>
       <b>✦</b>
 
-      <span>
-        Content Creator
-      </span>
-
+      <span>Content Creator</span>
       <b>✦</b>
 
-      <span>
-        Model
-      </span>
-
+      <span>Model</span>
       <b>✦</b>
 
-      <span>
-        Creative Artist
-      </span>
-
+      <span>Creative Artist</span>
       <b>✦</b>
 
     </div>
 
 
-    <!-- SECOND IDENTICAL COPY -->
-
     <div class="marquee-content">
 
-      <span>
-        Cosplayer
-      </span>
-
+      <span>Cosplayer</span>
       <b>✦</b>
 
-      <span>
-        Content Creator
-      </span>
-
+      <span>Content Creator</span>
       <b>✦</b>
 
-      <span>
-        Model
-      </span>
-
+      <span>Model</span>
       <b>✦</b>
 
-      <span>
-        Creative Artist
-      </span>
-
+      <span>Creative Artist</span>
       <b>✦</b>
 
-      <span>
-        Cosplayer
-      </span>
-
+      <span>Cosplayer</span>
       <b>✦</b>
 
-      <span>
-        Content Creator
-      </span>
-
+      <span>Content Creator</span>
       <b>✦</b>
 
-      <span>
-        Model
-      </span>
-
+      <span>Model</span>
       <b>✦</b>
 
-      <span>
-        Creative Artist
-      </span>
-
+      <span>Creative Artist</span>
       <b>✦</b>
 
     </div>
@@ -3386,7 +3655,6 @@ select{
 >
 
   <div class="container about-layout reveal">
-
 
     <div class="section-heading">
 
@@ -3457,7 +3725,6 @@ select{
 
   <div class="container">
 
-
     <div class="section-heading center reveal">
 
       <p class="section-label">
@@ -3501,7 +3768,6 @@ select{
 
   <div class="container">
 
-
     <div class="section-heading center reveal">
 
       <p class="section-label">
@@ -3527,13 +3793,11 @@ select{
 
     <div class="achievement-highlights reveal">
 
-
       <article class="achievement-feature-card">
 
         <div class="achievement-feature-icon">
           🏆
         </div>
-
 
         <div>
 
@@ -3560,7 +3824,6 @@ select{
 
 
       <div class="achievement-counters">
-
 
         <article class="achievement-counter-card">
 
@@ -3639,7 +3902,6 @@ select{
 
   <div class="container">
 
-
     <div class="section-heading reveal">
 
       <p class="section-label">
@@ -3698,7 +3960,6 @@ select{
 
   <div class="container">
 
-
     <div class="section-heading center reveal">
 
       <p class="section-label">
@@ -3723,7 +3984,6 @@ select{
 
 
     <div class="events-feature reveal">
-
 
       <div>
 
@@ -3866,9 +4126,7 @@ select{
 
   <div class="container">
 
-
     <div class="global-reach-header reveal">
-
 
       <div class="section-heading">
 
@@ -3899,7 +4157,6 @@ select{
 
     <div class="global-reach-summary reveal">
 
-
       <article class="global-main-stat">
 
         <span class="section-label">
@@ -3922,7 +4179,6 @@ select{
 
 
       <div class="global-stat-grid">
-
 
         <article class="global-stat-card">
 
@@ -4021,7 +4277,6 @@ select{
 
   <div class="container">
 
-
     <div class="section-heading center reveal">
 
       <p class="section-label">
@@ -4107,9 +4362,7 @@ select{
 
   <div class="container">
 
-
     <div class="media-heading reveal">
-
 
       <div class="section-heading">
 
@@ -4138,7 +4391,6 @@ select{
 
 
     <div class="media-featured-card reveal">
-
 
       <div>
 
@@ -4172,7 +4424,6 @@ select{
 
 
     <div class="media-toolbar">
-
 
       <div
         class="media-filters"
@@ -4216,7 +4467,6 @@ select{
 
   <div class="container contact-box reveal">
 
-
     <div>
 
       <p
@@ -4259,17 +4509,14 @@ select{
 
 <section class="photo-marquee-section">
 
-
   <div class="photo-marquee">
-
 
     <div class="photo-marquee-track">
 
 
-      <!-- PHOTO SET 1 -->
+      <!-- SET 1 -->
 
       <div class="photo-marquee-group">
-
 
         <div class="photo-marquee-item">
 
@@ -4335,7 +4582,6 @@ select{
           >
 
         </div>
-
 
       </div>
 
@@ -4344,7 +4590,6 @@ select{
 
       <div class="photo-marquee-group">
 
-
         <div class="photo-marquee-item">
 
           <img
@@ -4409,7 +4654,6 @@ select{
           >
 
         </div>
-
 
       </div>
 
@@ -4429,9 +4673,7 @@ select{
 
 <footer class="site-footer">
 
-
   <div class="container footer-content">
-
 
     <a
       href="#home"
@@ -4447,7 +4689,6 @@ select{
 
 
     <div class="footer-links">
-
 
       <a
         href="https://www.facebook.com/mingmihocosplay"
@@ -4472,7 +4713,6 @@ select{
         X / Twitter
       </a>
 
-
     </div>
 
   </div>
@@ -4489,9 +4729,7 @@ select{
   id="lightbox"
 >
 
-
   <div class="lightbox-panel">
-
 
     <button
       class="lightbox-close"
@@ -5097,6 +5335,7 @@ function renderCosplays(
 
 
   byId("galleryEmpty").style.display =
+
     list.length
       ? "none"
       : "block";
@@ -5416,6 +5655,7 @@ function renderEvents(){
   byId(
     "eventsEmpty"
   ).style.display =
+
     list.length
       ? "none"
       : "block";
@@ -5674,33 +5914,13 @@ setupSimpleFilters(
    MOBILE MENU
 ===================================================== */
 
-byId("menuToggle")
-  .addEventListener(
-    "click",
-    () => {
+/*
+   The mobile menu button is intentionally not used.
 
-      byId("navLinks")
-        .classList.toggle("open");
-
-    }
-  );
-
-
-document
-  .querySelectorAll(".nav-link")
-  .forEach(link => {
-
-    link.addEventListener(
-      "click",
-      () => {
-
-        byId("navLinks")
-          .classList.remove("open");
-
-      }
-    );
-
-  });
+   Mobile navigation is now a horizontal scrolling
+   navigation bar, so all sections remain directly
+   accessible.
+*/
 
 
 /* =====================================================
@@ -5722,11 +5942,6 @@ byId("enterBtn")
         );
 
 
-      /*
-        After entering, immediately
-        make Home active.
-      */
-
       document
         .querySelectorAll(".nav-link")
         .forEach(link => {
@@ -5744,15 +5959,8 @@ byId("enterBtn")
 
 
 /* =====================================================
-   ACTIVE NAVIGATION WHILE SCROLLING
+   ACTIVE NAVIGATION
 ===================================================== */
-
-/*
-
-  These are the actual sections connected
-  to the navigation.
-
-*/
 
 const navSections = [
 
@@ -5785,19 +5993,7 @@ const navigationLinks =
   );
 
 
-/*
-
-  This function determines which section
-  is currently visible.
-
-*/
-
 function updateActiveNavigation(){
-
-  /*
-    140px accounts for the sticky
-    navigation bar at the top.
-  */
 
   const scrollPosition =
     window.scrollY + 140;
@@ -5836,11 +6032,6 @@ function updateActiveNavigation(){
   );
 
 
-  /*
-    Remove active from EVERY link
-    before adding it to the correct one.
-  */
-
   navigationLinks.forEach(
     link => {
 
@@ -5860,10 +6051,6 @@ function updateActiveNavigation(){
 }
 
 
-/*
-  Run every time the user scrolls.
-*/
-
 window.addEventListener(
   "scroll",
   updateActiveNavigation,
@@ -5873,19 +6060,11 @@ window.addEventListener(
 );
 
 
-/*
-  Run when the page first loads.
-*/
-
 window.addEventListener(
   "load",
   updateActiveNavigation
 );
 
-
-/*
-  Run immediately too.
-*/
 
 updateActiveNavigation();
 
@@ -5925,10 +6104,71 @@ renderEvents();
 observe();
 
 
+/* =====================================================
+   EXTRA MARQUEE SAFETY
+===================================================== */
+
+/*
+   Some mobile browsers occasionally pause CSS
+   animations after a tab becomes inactive.
+
+   When the page becomes visible again,
+   explicitly restart the marquee animations.
+*/
+
+document.addEventListener(
+  "visibilitychange",
+  () => {
+
+    if(
+      document.visibilityState === "visible"
+    ){
+
+      const textMarquee =
+        document.querySelector(
+          ".marquee-track"
+        );
+
+      const photoMarquee =
+        document.querySelector(
+          ".photo-marquee-track"
+        );
+
+
+      if(textMarquee){
+
+        textMarquee.style.animation =
+          "none";
+
+        void textMarquee.offsetWidth;
+
+        textMarquee.style.animation =
+          "infiniteTextScroll 24s linear infinite";
+
+      }
+
+
+      if(photoMarquee){
+
+        photoMarquee.style.animation =
+          "none";
+
+        void photoMarquee.offsetWidth;
+
+        photoMarquee.style.animation =
+          "infinitePhotoScroll 35s linear infinite";
+
+      }
+
+    }
+
+  }
+
+);
+
 </script>
 
 
 </body>
 
 </html>
-```
