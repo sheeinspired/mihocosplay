@@ -564,13 +564,19 @@ h2{
 
   border:0;
 
-  background:none;
+  background:transparent;
 
-  width:40px;
+  width:44px;
 
-  height:40px;
+  height:44px;
+
+  padding:8px;
 
   cursor:pointer;
+
+  border-radius:12px;
+
+  flex-shrink:0;
 
 }
 
@@ -583,8 +589,25 @@ h2{
 
   background:var(--ink);
 
-  margin:6px;
+  margin:5px 0;
 
+  border-radius:999px;
+
+  transition:transform .25s ease, opacity .25s ease;
+
+}
+
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1){
+  transform:translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2){
+  opacity:0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3){
+  transform:translateY(-7px) rotate(-45deg);
 }
 
 
@@ -2696,185 +2719,40 @@ select{
 
 
   /*
-    Keep navigation visible.
-    Instead of hiding it behind a hamburger,
-    allow it to scroll horizontally.
+    TABLET NAVIGATION
+    Use the same expandable menu behavior
+    as mobile for a cleaner, touch-friendly header.
   */
 
   .navbar{
-
-    gap:20px;
-
-  }
-
-
-  .menu-toggle{
-
-    display:none;
-
-  }
-
-
-  .nav-links{
-
-    display:flex;
-
-    flex:1;
-
-    min-width:0;
-
-    overflow-x:auto;
-
-    overflow-y:hidden;
-
-    justify-content:flex-end;
-
-    gap:22px;
-
-    scrollbar-width:none;
-
-    -ms-overflow-style:none;
-
-  }
-
-
-  .nav-links::-webkit-scrollbar{
-
-    display:none;
-
-  }
-
-
-  .nav-link{
-
-    flex-shrink:0;
-
-    padding:27px 0;
-
-  }
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:620px){
-
-  body{
-
-    overflow-x:hidden;
-
-  }
-
-
-  .container{
-
-    width:
-      calc(100% - 32px);
-
-  }
-
-
-  .section{
-
-    padding:75px 0;
-
-  }
-
-
-  .hero{
-
-    padding:55px 0;
-
-  }
-
-
-  /*
-    MOBILE NAVIGATION
-  */
-
-  .site-header{
-
-    position:sticky;
-
-    top:0;
-
-  }
-
-
-  .navbar{
-
     height:64px;
-
     width:100%;
-
-    padding-left:16px;
-
-    padding-right:0;
-
-    gap:14px;
-
+    padding:0 10px 0 16px;
+    gap:12px;
   }
-
 
   .site-logo{
-
     font-size:1.55rem;
-
   }
 
+  .menu-toggle{
+    width:42px;
+    height:42px;
+    padding:7px;
+  }
 
   .nav-links{
-
-    flex:1;
-
-    min-width:0;
-
-    width:100%;
-
-    justify-content:flex-start;
-
-    gap:20px;
-
-    padding-right:16px;
-
-    overflow-x:auto;
-
-    overflow-y:hidden;
-
-    -webkit-overflow-scrolling:touch;
-
-    scroll-behavior:smooth;
-
-    scrollbar-width:none;
-
+    top:calc(100% + 1px);
+    padding:8px 16px 16px;
   }
-
-
-  .nav-links::-webkit-scrollbar{
-
-    display:none;
-
-  }
-
 
   .nav-link{
-
-    font-size:.72rem;
-
-    padding:24px 0;
-
-    flex-shrink:0;
-
+    font-size:.82rem;
+    padding:13px 4px;
   }
 
-
   .nav-link::after{
-
-    bottom:15px;
-
+    bottom:7px;
   }
 
 
@@ -3321,6 +3199,8 @@ select{
       id="menuToggle"
       type="button"
       aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
     >
 
       <span></span>
@@ -3493,7 +3373,7 @@ select{
         >
 
           <strong>
-            323K
+            357K
           </strong>
 
           <span>
@@ -3504,28 +3384,32 @@ select{
 
 
         <a
-          href="#"
+          href="https://www.x.com/mingmiho"
+          target="_blank"
+          rel="noopener"
           class="social-stat"
         >
 
           <strong>
-            64.2K
+            56K
           </strong>
 
           <span>
-            X / Twitter Followers
+            X Followers
           </span>
 
         </a>
 
 
         <a
-          href="#"
+          href="https://www.tiktok.com/@mihocosplay"
+          target="_blank"
+          rel="noopener"
           class="social-stat"
         >
 
           <strong>
-            84.8K
+            85.7K
           </strong>
 
           <span>
@@ -3536,12 +3420,14 @@ select{
 
 
         <a
-          href="#"
+          href="https://www.instagram.com/mingmihoo"
+          target="_blank"
+          rel="noopener"
           class="social-stat"
         >
 
           <strong>
-            160K
+            178K
           </strong>
 
           <span>
@@ -3674,22 +3560,14 @@ select{
 
       <p>
 
-        Miho is a cosplayer from the
-        Philippines who has been bringing
-        beloved anime and game characters
-        to life since 2012.
+        Miho is a cosplayer from the Philippines who has been bringing beloved anime and game characters to life since 2012. What started as a passion for anime and games grew into a career of competition, performance, guesting, judging, and international representation.
 
       </p>
 
 
       <p>
 
-        What began as a love for anime
-        and gaming became a creative
-        journey filled with artistry,
-        performance, travel, competitions,
-        and meaningful connections
-        throughout the cosplay community.
+        Her journey has taken her from local Philippine competitions to the World Cosplay Summit in Japan and international events across Asia and the Middle East. Along the way, she has become a champion, ambassador, guest, judge, speaker, and creative partner.
 
       </p>
 
@@ -3738,9 +3616,7 @@ select{
 
       <p class="section-description center">
 
-        A growing timeline of Miho’s
-        achievements, guest appearances,
-        championships, and global milestones.
+        From her first competitions in the Philippines to representing her country on the World Cosplay Summit stage, Miho’s journey reflects more than a decade of growth in cosplay. Her experiences now span championships, ambassador roles, guest appearances, judging, partnerships, and international conventions.
 
       </p>
 
@@ -3781,10 +3657,7 @@ select{
 
       <p class="section-description center">
 
-        From national competitions to
-        international stages, Miho continues
-        to represent Filipino cosplay through
-        artistry, performance, and dedication.
+        From winning local competitions to representing the Philippines internationally, Miho has built a journey around creativity, confidence, respect, and love for the art of cosplay.
 
       </p>
 
@@ -3812,9 +3685,7 @@ select{
 
           <p>
 
-            Miho represented the Philippines
-            at the World Cosplay Summit
-            in Japan in 2014.
+            Miho represented the Philippines at the World Cosplay Summit in Japan in 2014 after winning the Philippine championship.
 
           </p>
 
@@ -4144,11 +4015,7 @@ select{
 
       <p class="global-reach-introduction">
 
-        From conventions in the Philippines
-        to international events across Asia
-        and the Middle East, Miho’s cosplay
-        journey continues to connect
-        communities across borders.
+        From conventions and competitions in the Philippines to international guest appearances across Asia and the Middle East, Miho’s cosplay journey has connected her with communities across borders.
 
       </p>
 
@@ -4183,7 +4050,7 @@ select{
         <article class="global-stat-card">
 
           <strong>
-            18
+            14
           </strong>
 
           <span>
@@ -4222,7 +4089,7 @@ select{
         <article class="global-stat-card">
 
           <strong>
-            12+
+            14+
           </strong>
 
           <span>
@@ -4246,10 +4113,7 @@ select{
 
       <p>
 
-        “Every stage is another opportunity
-        to share creativity, celebrate
-        characters, and represent the
-        Filipino cosplay community.”
+        “Cosplay inspires people to express themselves with confidence, happiness, and love for the art — while respecting different cultures, perspectives, and communities.”
 
       </p>
 
@@ -4316,12 +4180,7 @@ select{
 
         <p>
 
-          Miho has collaborated with
-          gaming publishers, technology
-          brands, entertainment platforms,
-          and cosplay communities through
-          character portrayals, ambassador
-          roles, and campaigns.
+          Miho’s partnerships include cosplay ambassador roles, gaming collaborations, live-content partnerships, fashion work, and collaborations with brands and platforms including Riot Games, Alienware, Bilibili, miHoYo, Perfect World, Yostar, OXGN, Secretlab, X-Legend Entertainment, 24 Entertainment, Shift Up, Kumu, Globe, and DITO.
 
         </p>
 
@@ -4699,18 +4558,30 @@ select{
       </a>
 
 
-      <a href="#">
+      <a 
+      href="https://www.instagram.com/mingmihoo"
+      target="_blank"
+      rel="noopener"
+      >
         Instagram
       </a>
 
 
-      <a href="#">
+      <a 
+      href="https://www.tiktok.com/@mihocosplay"
+      target="_blank"
+      rel="noopener"
+      >
         TikTok
       </a>
 
 
-      <a href="#">
-        X / Twitter
+      <a 
+      href="https://www.x.com/mingmiho"
+      target="_blank"
+      rel="noopener"
+      >
+        X 
       </a>
 
     </div>
@@ -4804,25 +4675,49 @@ const timeline = [
   [
     "2012",
     "The Journey Begins",
-    "Miho began cosplaying, inspired by her love for anime, games, and character design."
+    "Miho began cosplaying out of her love for anime and games, bringing the characters she admired to life."
+  ],
+
+  [
+    "2013",
+    "First Major Championship",
+    "Won the Mindanao Cyber Expo Cosplay Championship in the Philippines."
   ],
 
   [
     "2014",
     "World Cosplay Summit",
-    "Represented the Philippines at the World Cosplay Summit in Japan."
+    "Won the Mindanao Cosplay Summit and became Champion of the World Cosplay Summit Philippine Championship, earning the opportunity to represent the Philippines in Japan."
+  ],
+
+  [
+    "2016",
+    "International Ambassador",
+    "Became a Drawcrowd Cosplay Ambassador and expanded her work beyond the Philippines."
+  ],
+
+  [
+    "2018",
+    "WCS Alumni & Brand Partnerships",
+    "Returned to Japan as a World Cosplay Summit Alumni Guest while taking on cosplay ambassador and partnership roles."
   ],
 
   [
     "2019",
-    "Philippine Ambassador",
-    "Became a World Cosplay Summit Ambassador of the Philippines."
+    "Philippine Cosplay Ambassador",
+    "Served as World Cosplay Summit Ambassador of the Philippines and appeared at international cosplay and gaming programs in Japan and Indonesia."
   ],
 
   [
-    "Present",
-    "International Cosplay Guest",
-    "Continues appearing at events, conventions, and cosplay programs around the world."
+    "2020–2022",
+    "Championship Years",
+    "Earned championship and winner recognition in Honkai Impact, JobTribes, Mahjong Soul, Azur Lane, and Cosplay De Zero Umigomi."
+  ],
+
+  [
+    "2023–2024",
+    "International Guesting",
+    "Continued representing Filipino cosplay through guest appearances in Singapore, Saudi Arabia, Vietnam, and events across the Philippines."
   ]
 
 ];
@@ -4833,40 +4728,56 @@ const achievements = [
   [
     "2013",
     "🥇",
-    "Mindanao Cyber Expo Champion",
+    "Mindanao Cyber Expo Cosplay Champion",
     "Won the cosplay championship at Mindanao Cyber Expo.",
     "Philippines"
   ],
 
   [
     "2014",
+    "🏆",
+    "Mindanao Cosplay Summit — 1st Place",
+    "Placed first at the Mindanao Cosplay Summit.",
+    "Philippines"
+  ],
+
+  [
+    "2014",
     "🇵🇭",
-    "World Cosplay Summit Representative",
-    "Represented the Philippines at one of the world’s most prestigious cosplay events.",
-    "Japan"
-  ],
-
-  [
-    "2018",
-    "🌸",
-    "World Cosplay Summit Alumni Guest",
-    "Returned to Japan as an alumni guest of the World Cosplay Summit.",
-    "Japan"
-  ],
-
-  [
-    "2019",
-    "🎖️",
-    "Philippine Cosplay Ambassador",
-    "Became a World Cosplay Summit Ambassador of the Philippines.",
-    "Japan"
+    "World Cosplay Summit Philippine Champion",
+    "Won the Philippine championship and represented the country at the World Cosplay Summit in Japan.",
+    "Philippines / Japan"
   ],
 
   [
     "2020",
     "⚔️",
     "Honkai Impact Cosplay Champion",
-    "Earned championship recognition through a Honkai Impact cosplay competition.",
+    "Earned champion recognition in the Honkai Impact cosplay competition.",
+    "Online"
+  ],
+
+  [
+    "2020",
+    "🎮",
+    "JobTribes Cosplay Champion",
+    "Won the JobTribes cosplay competition.",
+    "Online"
+  ],
+
+  [
+    "2020",
+    "🀄",
+    "Mahjong Soul Tournament Champion",
+    "Won the Mahjong Soul online tournament.",
+    "Online"
+  ],
+
+  [
+    "2021",
+    "⚓",
+    "Azur Lane Cosplay Winner",
+    "Received winner recognition in the Azur Lane cosplay competition.",
     "Online"
   ],
 
@@ -4874,7 +4785,7 @@ const achievements = [
     "2022",
     "🏅",
     "Cosplay De Zero Umigomi Winner",
-    "Received international recognition through the Japanese cosplay competition.",
+    "Won the Cosplay De Zero Umigomi competition in Japan.",
     "Japan"
   ]
 
@@ -4942,12 +4853,22 @@ const cosplays = [
 
 const events = [
 
+  /* INTERNATIONAL */
+
   {
     year:2014,
-    title:"World Cosplay Summit",
+    title:"World Cosplay Summit — Philippine Representative",
     place:"Japan",
     type:"international",
     kind:"competition"
+  },
+
+  {
+    year:2016,
+    title:"Drawcrowd",
+    place:"Singapore",
+    type:"international",
+    kind:"guest"
   },
 
   {
@@ -4960,18 +4881,42 @@ const events = [
 
   {
     year:2019,
-    title:"World Cosplay Summit Ambassador",
-    place:"Philippines / Japan",
+    title:"World Cosplay Summit Ambassador of the Philippines",
+    place:"Japan",
     type:"international",
     kind:"guest"
   },
 
   {
-    year:2020,
-    title:"Honkai Impact Cosplay Competition",
-    place:"Online",
-    type:"competition",
-    kind:"competition"
+    year:2019,
+    title:"E-Sports and Gaming Convention",
+    place:"Indonesia",
+    type:"international",
+    kind:"guest"
+  },
+
+  {
+    year:2019,
+    title:"Nico Nico Live Cosplay",
+    place:"Japan",
+    type:"international",
+    kind:"guest"
+  },
+
+  {
+    year:2019,
+    title:"Next Cosplayer",
+    place:"Japan",
+    type:"international",
+    kind:"guest"
+  },
+
+  {
+    year:2019,
+    title:"Cosmeria — Guest Speaker",
+    place:"Japan",
+    type:"international",
+    kind:"guest"
   },
 
   {
@@ -4983,10 +4928,294 @@ const events = [
   },
 
   {
-    year:2026,
-    title:"International Cosplay Guesting",
-    place:"Add event location",
-    type:"guest",
+    year:2022,
+    title:"World Cosplay Summit",
+    place:"Japan",
+    type:"international",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"Anime Festival Asia",
+    place:"Singapore",
+    type:"international",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"Gamers8 / WCS",
+    place:"Saudi Arabia",
+    type:"international",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"World X Fest",
+    place:"Singapore",
+    type:"international",
+    kind:"guest"
+  },
+
+  {
+    year:2024,
+    title:"Ambedo Fiesta",
+    place:"Vietnam",
+    type:"international",
+    kind:"guest"
+  },
+
+  /* ONLINE COMPETITIONS */
+
+  {
+    year:2020,
+    title:"Honkai Impact Cosplay Champion",
+    place:"Online",
+    type:"competition",
+    kind:"competition"
+  },
+
+  {
+    year:2020,
+    title:"JobTribes Cosplay Champion",
+    place:"Online",
+    type:"competition",
+    kind:"competition"
+  },
+
+  {
+    year:2020,
+    title:"Mahjong Soul Tournament Champion",
+    place:"Online",
+    type:"competition",
+    kind:"competition"
+  },
+
+  {
+    year:2021,
+    title:"Azur Lane Cosplay Winner",
+    place:"Online",
+    type:"competition",
+    kind:"competition"
+  },
+
+  /* LOCAL — PHILIPPINES */
+
+  {
+    year:2013,
+    title:"Mindanao Cyber Expo — Cosplay Champion",
+    place:"Philippines",
+    type:"local",
+    kind:"competition"
+  },
+
+  {
+    year:2014,
+    title:"Mindanao Cosplay Summit — 1st Place",
+    place:"Philippines",
+    type:"local",
+    kind:"competition"
+  },
+
+  {
+    year:2014,
+    title:"World Cosplay Summit Championship",
+    place:"Metro Manila, Philippines",
+    type:"local",
+    kind:"competition"
+  },
+
+  {
+    year:2014,
+    title:"Bunkasai Event",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2014,
+    title:"Gakuen Battle",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2014,
+    title:"Mindanao Cosplay Summit",
+    place:"Cagayan de Oro, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2014,
+    title:"Mindanao Cosplay Summit",
+    place:"General Santos City, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2014,
+    title:"Mindanao Cosplay Summit",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2015,
+    title:"NatsuFes Summer Cosplay",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2015,
+    title:"Mindanao Cosplay Fest TV Show",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2015,
+    title:"World Cosplay Summit Championship",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"competition"
+  },
+
+  {
+    year:2015,
+    title:"Mindanao Cyber Expo",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2016,
+    title:"Toronto Festival",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2016,
+    title:"Mindanao Cosplay Summit",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2017,
+    title:"Toycon",
+    place:"Metro Manila, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2018,
+    title:"Cosmania",
+    place:"Metro Manila, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2019,
+    title:"Ozine Fest Cebu",
+    place:"Cebu City, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2022,
+    title:"Toycon | World Cosplay Summit",
+    place:"Metro Manila, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2023,
+    title:"Majic Palawan",
+    place:"Palawan, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"Ozine Fest — Wild Card",
+    place:"Metro Manila, Philippines",
+    type:"local",
+    kind:"judge"
+  },
+
+  {
+    year:2023,
+    title:"Mini Ozine Fest",
+    place:"Metro Manila, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"TGK Matsuri",
+    place:"Davao City, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"BCD FanCon",
+    place:"Bacolod, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"Dipolog Cosplay Day",
+    place:"Dipolog City, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"Kawaii Expo",
+    place:"Cebu City, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2023,
+    title:"Ozine Fest Retro",
+    place:"Metro Manila, Philippines",
+    type:"local",
+    kind:"guest"
+  },
+
+  {
+    year:2024,
+    title:"APAC Predator League",
+    place:"Metro Manila, Philippines",
+    type:"local",
     kind:"guest"
   }
 
@@ -5006,35 +5235,35 @@ const destinations = [
     "🇸🇬",
     "Southeast Asia",
     "Singapore",
-    "Appeared at cosplay, gaming, and entertainment events."
+    "Drawcrowd guesting, Anime Festival Asia, and World X Fest appearances."
   ],
 
   [
     "🇮🇩",
     "Southeast Asia",
     "Indonesia",
-    "International guest at an esports and gaming convention."
+    "Guest at an E-Sports and Gaming Convention."
   ],
 
   [
     "🇸🇦",
     "Middle East",
     "Saudi Arabia",
-    "Guest at major gaming and international cosplay programs."
+    "Guest at Gamers8 / WCS."
   ],
 
   [
     "🇻🇳",
     "Southeast Asia",
     "Vietnam",
-    "International cosplay guest at regional events."
+    "International cosplay guest at Ambedo Fiesta."
   ],
 
   [
     "🇵🇭",
     "Home Country",
     "Philippines",
-    "Competitor, champion, guest, and judge at events across the country."
+    "Competitor, champion, guest, and judge at events across Metro Manila, Davao, Cebu, Palawan, Bacolod, Dipolog, Cagayan de Oro, and General Santos."
   ]
 
 ];
@@ -5044,26 +5273,134 @@ const partnerships = [
 
   {
     type:"ambassador",
-    title:"Cosplay Ambassador",
-    text:"Ambassador and community representation work connected to cosplay programs and events."
+    title:"Migme Cosplay Ambassador — 2016",
+    text:"Cosplay ambassador partnership connected to Migme."
   },
 
   {
-    type:"gaming",
-    title:"Gaming Collaborations",
-    text:"Creative cosplay projects and campaigns inspired by game worlds and characters."
-  },
-
-  {
-    type:"technology",
-    title:"Technology Partnerships",
-    text:"Selected creative collaborations with technology and lifestyle brands."
+    type:"ambassador",
+    title:"Drawcrowd Cosplay Ambassador — 2017",
+    text:"International cosplay ambassador partnership with Drawcrowd in Singapore."
   },
 
   {
     type:"platform",
-    title:"Media Platforms",
-    text:"Digital features, content collaborations, and community campaigns."
+    title:"Pocket Live Partner — 2018",
+    text:"Partnership with Pocket Live supporting cosplay and live content."
+  },
+
+  {
+    type:"gaming",
+    title:"E-sports and Gaming Summit — 2018",
+    text:"Cosplay ambassador work connected to the Alchemist Code, portraying Ouroboros."
+  },
+
+  {
+    type:"gaming",
+    title:"Alchemist Code Cosplay Ambassador — 2018",
+    text:"Official cosplay ambassador portrayal as Ouroboros."
+  },
+
+  {
+    type:"gaming",
+    title:"E-sports and Gaming Summit — 2019",
+    text:"Cosplay ambassador work connected to Final Fantasy Brave Exvius, portraying Fina."
+  },
+
+  {
+    type:"gaming",
+    title:"Final Fantasy Brave Exvius Cosplay Ambassador — 2019",
+    text:"Official cosplay ambassador portrayal as Fina."
+  },
+
+  {
+    type:"fashion",
+    title:"Acoslasia Tokyo Japan Fashion — 2021",
+    text:"Fashion and cosplay collaboration in Japan."
+  },
+
+  {
+    type:"brand",
+    title:"Riot Games",
+    text:"Brand and gaming collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"Alienware",
+    text:"Technology and gaming collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"Bilibili",
+    text:"Entertainment and digital platform collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"miHoYo",
+    text:"Game and character-focused collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"Perfect World",
+    text:"Gaming and entertainment collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"Yostar",
+    text:"Gaming and character-focused collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"OXGN",
+    text:"Lifestyle and fashion collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"Secretlab",
+    text:"Gaming lifestyle collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"X-Legend Entertainment",
+    text:"Gaming and entertainment collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"24 Entertainment",
+    text:"Gaming and entertainment collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"Shift Up",
+    text:"Game and character-focused collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"Kumu",
+    text:"Digital content and creator collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"Globe",
+    text:"Technology and telecommunications collaboration."
+  },
+
+  {
+    type:"brand",
+    title:"DITO",
+    text:"Technology and telecommunications collaboration."
   }
 
 ];
@@ -5911,16 +6248,72 @@ setupSimpleFilters(
 
 
 /* =====================================================
-   MOBILE MENU
+   MOBILE / TABLET HAMBURGER MENU
 ===================================================== */
 
-/*
-   The mobile menu button is intentionally not used.
+const menuToggle = byId("menuToggle");
+const navLinks = byId("navLinks");
 
-   Mobile navigation is now a horizontal scrolling
-   navigation bar, so all sections remain directly
-   accessible.
-*/
+function closeMenu(){
+
+  if(!navLinks || !menuToggle) return;
+
+  navLinks.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded","false");
+  menuToggle.setAttribute(
+    "aria-label",
+    "Open navigation menu"
+  );
+
+}
+
+function toggleMenu(){
+
+  if(!navLinks || !menuToggle) return;
+
+  const isOpen =
+    navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute(
+    "aria-expanded",
+    String(isOpen)
+  );
+
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen
+      ? "Close navigation menu"
+      : "Open navigation menu"
+  );
+
+}
+
+menuToggle.addEventListener(
+  "click",
+  toggleMenu
+);
+
+document
+  .querySelectorAll(".nav-link")
+  .forEach(link => {
+
+    link.addEventListener(
+      "click",
+      closeMenu
+    );
+
+  });
+
+window.addEventListener(
+  "resize",
+  () => {
+
+    if(window.innerWidth > 900){
+      closeMenu();
+    }
+
+  }
+);
 
 
 /* =====================================================
@@ -5996,7 +6389,7 @@ const navigationLinks =
 function updateActiveNavigation(){
 
   const scrollPosition =
-    window.scrollY + 140;
+    window.scrollY + 110;
 
 
   let currentSection =
